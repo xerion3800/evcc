@@ -150,7 +150,7 @@ export default {
 	},
 	computed: {
 		githubHashUrl: function () {
-			return `https://github.com/evcc-io/evcc/commit/${this.commit}`;
+			return `https://github.com/xerion3800/evcc/commit/${this.commit}`;
 		},
 		newVersionAvailable: function () {
 			return (
