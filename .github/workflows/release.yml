@@ -8,7 +8,7 @@ on:
 jobs:
   call-build-workflow:
     if: "startsWith(github.ref, 'refs/tags')"
-    uses: evcc-io/evcc/.github/workflows/default.yml@master
+    uses: xerion3800/evcc/.github/workflows/default.yml@master
 
   docker:
     name: Publish Docker :release
@@ -126,7 +126,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@master
         with:
-          repository: evcc-io/hassio-addon
+          repository: xerion3800/hassio-addon
           token: ${{ secrets.GH_TOKEN }}
           path: ./hassio
 

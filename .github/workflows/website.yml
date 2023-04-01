@@ -27,7 +27,7 @@ jobs:
         with:
           personal_token: ${{ secrets.GH_TOKEN }}
           publish_dir: ./templates/evcc.io/
-          external_repository: evcc-io/evcc.io
+          external_repository: xerion3800/evcc.io
           publish_branch: main
           destination_dir: data
           allow_empty_commit: false
