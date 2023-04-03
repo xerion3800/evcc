@@ -65,10 +65,10 @@ test::
 	@echo "Running testsuite"
 	CGO_ENABLED=0 go test $(BUILD_TAGS) ./...
 
-# porcelain::
-# 	gofmt -w -l $$(find . -name '*.go')
-# 	go mod tidy
-# 	test -z "$$(git status --porcelain)" || (git status; git diff; false)
+porcelain::
+	gofmt -w -l $$(find . -name '*.go')
+	go mod tidy
+	test -z "$$(git status --porcelain)" || (git status; git diff; false)
 
 build::
 	@echo Version: $(VERSION) $(SHA) $(BUILD_DATE)
