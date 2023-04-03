@@ -5,9 +5,9 @@ import (
 	"fmt"
 	"time"
 
-	"github.com/evcc-io/evcc/api/proto/pb"
-	"github.com/evcc-io/evcc/util"
-	"github.com/evcc-io/evcc/util/cloud"
+	"github.com/xerion3800/evcc/api/proto/pb"
+	"github.com/xerion3800/evcc/util"
+	"github.com/xerion3800/evcc/util/cloud"
 	"google.golang.org/grpc/codes"
 	"google.golang.org/grpc/status"
 )

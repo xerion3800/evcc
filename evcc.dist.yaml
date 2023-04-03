@@ -26,7 +26,7 @@ interval: 10s # control cycle interval
 # Data is aggregated, no individual charging sessions are tracked. The collected,
 # anonymous data can be retrieved using https://api.evcc.io.
 #
-# See https://github.com/evcc-io/evcc/pull/4343 or details.
+# See https://github.com/xerion3800/evcc/pull/4343 or details.
 #
 # For time being, this is only available to sponsors, hence data is associated with
 # the sponsor token's identity.

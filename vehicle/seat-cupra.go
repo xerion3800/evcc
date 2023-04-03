@@ -5,12 +5,12 @@ import (
 	"fmt"
 	"time"
 
-	"github.com/evcc-io/evcc/api"
-	"github.com/evcc-io/evcc/util"
-	"github.com/evcc-io/evcc/util/request"
-	"github.com/evcc-io/evcc/vehicle/seat/cupra"
-	"github.com/evcc-io/evcc/vehicle/vag/tokenrefreshservice"
-	"github.com/evcc-io/evcc/vehicle/vag/vwidentity"
+	"github.com/xerion3800/evcc/api"
+	"github.com/xerion3800/evcc/util"
+	"github.com/xerion3800/evcc/util/request"
+	"github.com/xerion3800/evcc/vehicle/seat/cupra"
+	"github.com/xerion3800/evcc/vehicle/vag/tokenrefreshservice"
+	"github.com/xerion3800/evcc/vehicle/vag/vwidentity"
 	"golang.org/x/oauth2"
 )
 

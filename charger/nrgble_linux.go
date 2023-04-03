@@ -7,9 +7,9 @@ import (
 	"strconv"
 	"time"
 
-	"github.com/evcc-io/evcc/api"
-	"github.com/evcc-io/evcc/charger/nrg/ble"
-	"github.com/evcc-io/evcc/util"
+	"github.com/xerion3800/evcc/api"
+	"github.com/xerion3800/evcc/charger/nrg/ble"
+	"github.com/xerion3800/evcc/util"
 	"github.com/godbus/dbus/v5"
 	"github.com/lunixbochs/struc"
 	"github.com/muka/go-bluetooth/bluez/profile/adapter"
@@ -243,7 +243,7 @@ func (nrg *NRGKickBLE) Enabled() (bool, error) {
 	nrg.log.TRACE.Printf("read info: %+v", res)
 
 	// workaround internal NRGkick state change after connecting
-	// https://github.com/evcc-io/evcc/pull/274
+	// https://github.com/xerion3800/evcc/pull/274
 	return !res.PauseCharging || res.ChargingActive, nil
 }
 
@@ -255,7 +255,7 @@ func (nrg *NRGKickBLE) Enable(enable bool) error {
 	}
 
 	// workaround internal NRGkick state change after connecting
-	// https://github.com/evcc-io/evcc/pull/274
+	// https://github.com/xerion3800/evcc/pull/274
 	if !enable && res.PauseCharging {
 		nrg.pauseCharging = false
 		settings := nrg.mergeSettings(res)

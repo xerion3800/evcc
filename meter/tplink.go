@@ -1,9 +1,9 @@
 package meter
 
 import (
-	"github.com/evcc-io/evcc/api"
-	"github.com/evcc-io/evcc/meter/tplink"
-	"github.com/evcc-io/evcc/util"
+	"github.com/xerion3800/evcc/api"
+	"github.com/xerion3800/evcc/meter/tplink"
+	"github.com/xerion3800/evcc/util"
 )
 
 func init() {

@@ -4,10 +4,10 @@ import (
 	"fmt"
 	"time"
 
-	"github.com/evcc-io/evcc/api"
-	"github.com/evcc-io/evcc/meter/mystrom"
-	"github.com/evcc-io/evcc/provider"
-	"github.com/evcc-io/evcc/util"
+	"github.com/xerion3800/evcc/api"
+	"github.com/xerion3800/evcc/meter/mystrom"
+	"github.com/xerion3800/evcc/provider"
+	"github.com/xerion3800/evcc/util"
 )
 
 // myStrom switch:

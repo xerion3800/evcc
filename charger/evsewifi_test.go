@@ -6,7 +6,7 @@ import (
 	"net/http/httptest"
 	"testing"
 
-	"github.com/evcc-io/evcc/api"
+	"github.com/xerion3800/evcc/api"
 )
 
 func TestEvseWifi(t *testing.T) {

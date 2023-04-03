@@ -7,9 +7,9 @@ import (
 	"os"
 	"strings"
 
-	"github.com/evcc-io/evcc/detect"
-	"github.com/evcc-io/evcc/detect/tasks"
-	"github.com/evcc-io/evcc/util"
+	"github.com/xerion3800/evcc/detect"
+	"github.com/xerion3800/evcc/detect/tasks"
+	"github.com/xerion3800/evcc/util"
 	"github.com/korylprince/ipnetgen"
 	"github.com/olekukonko/tablewriter"
 	"github.com/spf13/cobra"

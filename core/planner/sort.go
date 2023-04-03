@@ -1,6 +1,6 @@
 package planner
 
-import "github.com/evcc-io/evcc/api"
+import "github.com/xerion3800/evcc/api"
 
 // SortByTime is a sortFunc for slices.Sort
 func SortByTime(i, j api.Rate) bool {

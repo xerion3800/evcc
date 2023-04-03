@@ -24,12 +24,12 @@ import (
 	"strings"
 	"time"
 
-	"github.com/evcc-io/evcc/api"
-	"github.com/evcc-io/evcc/charger/smaevcharger"
-	"github.com/evcc-io/evcc/provider"
-	"github.com/evcc-io/evcc/util"
-	"github.com/evcc-io/evcc/util/request"
-	"github.com/evcc-io/evcc/util/sponsor"
+	"github.com/xerion3800/evcc/api"
+	"github.com/xerion3800/evcc/charger/smaevcharger"
+	"github.com/xerion3800/evcc/provider"
+	"github.com/xerion3800/evcc/util"
+	"github.com/xerion3800/evcc/util/request"
+	"github.com/xerion3800/evcc/util/sponsor"
 	"github.com/hashicorp/go-version"
 	"golang.org/x/oauth2"
 )

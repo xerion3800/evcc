@@ -3,9 +3,9 @@ package charger
 import (
 	"fmt"
 
-	"github.com/evcc-io/evcc/api"
-	"github.com/evcc-io/evcc/meter/shelly"
-	"github.com/evcc-io/evcc/util"
+	"github.com/xerion3800/evcc/api"
+	"github.com/xerion3800/evcc/meter/shelly"
+	"github.com/xerion3800/evcc/util"
 )
 
 // Shelly charger implementation

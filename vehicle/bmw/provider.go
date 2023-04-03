@@ -3,8 +3,8 @@ package bmw
 import (
 	"time"
 
-	"github.com/evcc-io/evcc/api"
-	"github.com/evcc-io/evcc/provider"
+	"github.com/xerion3800/evcc/api"
+	"github.com/xerion3800/evcc/provider"
 )
 
 const kmPerMile = 1.609344

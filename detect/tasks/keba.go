@@ -4,8 +4,8 @@ import (
 	"sync"
 	"time"
 
-	"github.com/evcc-io/evcc/charger/keba"
-	"github.com/evcc-io/evcc/util"
+	"github.com/xerion3800/evcc/charger/keba"
+	"github.com/xerion3800/evcc/util"
 )
 
 const Keba TaskType = "keba"

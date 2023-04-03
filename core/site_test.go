@@ -3,7 +3,7 @@ package core
 import (
 	"testing"
 
-	"github.com/evcc-io/evcc/util"
+	"github.com/xerion3800/evcc/util"
 )
 
 func TestSitePower(t *testing.T) {

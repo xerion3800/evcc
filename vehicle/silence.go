@@ -4,10 +4,10 @@ import (
 	"strings"
 	"time"
 
-	"github.com/evcc-io/evcc/api"
-	"github.com/evcc-io/evcc/provider"
-	"github.com/evcc-io/evcc/util"
-	"github.com/evcc-io/evcc/vehicle/silence"
+	"github.com/xerion3800/evcc/api"
+	"github.com/xerion3800/evcc/provider"
+	"github.com/xerion3800/evcc/util"
+	"github.com/xerion3800/evcc/vehicle/silence"
 )
 
 // Silence is an api.Vehicle implementation for Silence S01 vehicles

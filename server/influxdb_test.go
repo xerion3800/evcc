@@ -4,7 +4,7 @@ import (
 	"testing"
 
 	"github.com/benbjohnson/clock"
-	"github.com/evcc-io/evcc/util"
+	"github.com/xerion3800/evcc/util"
 	inf2 "github.com/influxdata/influxdb-client-go/v2"
 	"github.com/influxdata/influxdb-client-go/v2/api/write"
 	"github.com/stretchr/testify/assert"
@@ -45,7 +45,7 @@ func TestInfluxTypes(t *testing.T) {
 	}
 
 	{
-		// nil value - https://github.com/evcc-io/evcc/issues/5950
+		// nil value - https://github.com/xerion3800/evcc/issues/5950
 		w := &influxWriter{
 			t: t, p: []*write.Point{inf2.NewPoint("phasesConfigured", nil, map[string]any{"value": nil}, m.clock.Now())},
 		}

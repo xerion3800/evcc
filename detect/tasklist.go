@@ -4,8 +4,8 @@ import (
 	"fmt"
 	"sync"
 
-	"github.com/evcc-io/evcc/detect/tasks"
-	"github.com/evcc-io/evcc/util"
+	"github.com/xerion3800/evcc/detect/tasks"
+	"github.com/xerion3800/evcc/util"
 )
 
 type TaskList struct {

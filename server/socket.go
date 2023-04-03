@@ -9,7 +9,7 @@ import (
 	"sync"
 	"time"
 
-	"github.com/evcc-io/evcc/util"
+	"github.com/xerion3800/evcc/util"
 	"github.com/gorilla/websocket"
 	"github.com/kr/pretty"
 )
@@ -127,7 +127,7 @@ func kv(p util.Param) string {
 	}
 
 	if p.Key == "" && val == "" {
-		log.ERROR.Printf("invalid key/val for %+v %# v, please report to https://github.com/evcc-io/evcc/issues/6439", p, pretty.Formatter(p.Val))
+		log.ERROR.Printf("invalid key/val for %+v %# v, please report to https://github.com/xerion3800/evcc/issues/6439", p, pretty.Formatter(p.Val))
 		return "\"foo\":\"bar\""
 	}
 

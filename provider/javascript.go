@@ -1,8 +1,8 @@
 package provider
 
 import (
-	"github.com/evcc-io/evcc/provider/javascript"
-	"github.com/evcc-io/evcc/util"
+	"github.com/xerion3800/evcc/provider/javascript"
+	"github.com/xerion3800/evcc/util"
 	"github.com/robertkrimen/otto"
 )
 

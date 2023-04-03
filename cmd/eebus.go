@@ -5,7 +5,7 @@ import (
 	"text/template"
 
 	"github.com/Masterminds/sprig/v3"
-	"github.com/evcc-io/evcc/charger/eebus"
+	"github.com/xerion3800/evcc/charger/eebus"
 	"github.com/spf13/cobra"
 )
 

@@ -6,8 +6,8 @@ import (
 	"os/signal"
 	"syscall"
 
-	"github.com/evcc-io/evcc/cmd/configure"
-	"github.com/evcc-io/evcc/util"
+	"github.com/xerion3800/evcc/cmd/configure"
+	"github.com/xerion3800/evcc/util"
 	"github.com/spf13/cobra"
 	"github.com/spf13/viper"
 )

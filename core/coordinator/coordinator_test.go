@@ -3,10 +3,10 @@ package coordinator
 import (
 	"testing"
 
-	"github.com/evcc-io/evcc/api"
-	"github.com/evcc-io/evcc/core/loadpoint"
-	"github.com/evcc-io/evcc/mock"
-	"github.com/evcc-io/evcc/util"
+	"github.com/xerion3800/evcc/api"
+	"github.com/xerion3800/evcc/core/loadpoint"
+	"github.com/xerion3800/evcc/mock"
+	"github.com/xerion3800/evcc/util"
 	"github.com/golang/mock/gomock"
 )
 

@@ -1,5 +1,5 @@
 package server
 
-import "github.com/evcc-io/evcc/util"
+import "github.com/xerion3800/evcc/util"
 
 var log = util.NewLogger("server")

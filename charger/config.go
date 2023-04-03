@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"strings"
 
-	"github.com/evcc-io/evcc/api"
+	"github.com/xerion3800/evcc/api"
 )
 
 type chargerRegistry map[string]func(map[string]interface{}) (api.Charger, error)

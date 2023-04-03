@@ -8,10 +8,10 @@ import (
 	"time"
 
 	"github.com/enbility/cemd/emobility"
-	"github.com/evcc-io/evcc/api"
-	"github.com/evcc-io/evcc/charger/eebus"
-	"github.com/evcc-io/evcc/core/loadpoint"
-	"github.com/evcc-io/evcc/util"
+	"github.com/xerion3800/evcc/api"
+	"github.com/xerion3800/evcc/charger/eebus"
+	"github.com/xerion3800/evcc/core/loadpoint"
+	"github.com/xerion3800/evcc/util"
 )
 
 const (

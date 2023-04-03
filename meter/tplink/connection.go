@@ -9,7 +9,7 @@ import (
 	"net"
 	"time"
 
-	"github.com/evcc-io/evcc/util"
+	"github.com/xerion3800/evcc/util"
 )
 
 // Connection is the TP-Link connection

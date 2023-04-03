@@ -172,7 +172,7 @@ export default {
 			}
 		},
 		releaseNotesUrl: function (version) {
-			return `https://github.com/evcc-io/evcc/releases/tag/${version}`;
+			return `https://github.com/xerion3800/evcc/releases/tag/${version}`;
 		},
 		openModal() {
 			const modal = Modal.getOrCreateInstance(document.getElementById("updateModal"));

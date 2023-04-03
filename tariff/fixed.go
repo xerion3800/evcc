@@ -5,9 +5,9 @@ import (
 	"sort"
 
 	"github.com/benbjohnson/clock"
-	"github.com/evcc-io/evcc/api"
-	"github.com/evcc-io/evcc/tariff/fixed"
-	"github.com/evcc-io/evcc/util"
+	"github.com/xerion3800/evcc/api"
+	"github.com/xerion3800/evcc/tariff/fixed"
+	"github.com/xerion3800/evcc/util"
 	"github.com/golang-module/carbon/v2"
 )
 

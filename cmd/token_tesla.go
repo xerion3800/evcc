@@ -9,7 +9,7 @@ import (
 	"strings"
 
 	"github.com/bogosj/tesla"
-	"github.com/evcc-io/evcc/util/request"
+	"github.com/xerion3800/evcc/util/request"
 	"github.com/manifoldco/promptui"
 	"github.com/skratchdot/open-golang/open"
 	"golang.org/x/oauth2"

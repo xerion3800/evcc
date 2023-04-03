@@ -5,7 +5,7 @@ import (
 	"strconv"
 	"sync"
 
-	"github.com/evcc-io/evcc/util"
+	"github.com/xerion3800/evcc/util"
 	tgbotapi "github.com/go-telegram-bot-api/telegram-bot-api/v5"
 )
 

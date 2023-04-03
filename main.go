@@ -6,9 +6,9 @@ import (
 	"io/fs"
 	"log"
 
-	"github.com/evcc-io/evcc/cmd"
-	"github.com/evcc-io/evcc/server/assets"
-	_ "github.com/evcc-io/evcc/util/goversion" // require minimum go version
+	"github.com/xerion3800/evcc/cmd"
+	"github.com/xerion3800/evcc/server/assets"
+	_ "github.com/xerion3800/evcc/util/goversion" // require minimum go version
 )
 
 var (

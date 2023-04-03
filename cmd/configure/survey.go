@@ -10,8 +10,8 @@ import (
 
 	"github.com/AlecAivazis/survey/v2"
 	"github.com/AlecAivazis/survey/v2/terminal"
-	"github.com/evcc-io/evcc/api"
-	"github.com/evcc-io/evcc/util/templates"
+	"github.com/xerion3800/evcc/api"
+	"github.com/xerion3800/evcc/util/templates"
 	stripmd "github.com/writeas/go-strip-markdown"
 	"golang.org/x/exp/slices"
 )

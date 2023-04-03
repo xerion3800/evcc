@@ -3,9 +3,9 @@ package charger
 import (
 	"fmt"
 
-	"github.com/evcc-io/evcc/api"
-	"github.com/evcc-io/evcc/provider"
-	"github.com/evcc-io/evcc/util"
+	"github.com/xerion3800/evcc/api"
+	"github.com/xerion3800/evcc/provider"
+	"github.com/xerion3800/evcc/util"
 )
 
 // Charger is an api.Charger implementation with configurable getters and setters.

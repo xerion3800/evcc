@@ -1,6 +1,6 @@
 package settings
 
-import "github.com/evcc-io/evcc/api/store"
+import "github.com/xerion3800/evcc/api/store"
 
 type storer struct {
 	key string

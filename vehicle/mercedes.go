@@ -5,9 +5,9 @@ import (
 	"strings"
 	"time"
 
-	"github.com/evcc-io/evcc/api"
-	"github.com/evcc-io/evcc/util"
-	"github.com/evcc-io/evcc/vehicle/mercedes"
+	"github.com/xerion3800/evcc/api"
+	"github.com/xerion3800/evcc/util"
+	"github.com/xerion3800/evcc/vehicle/mercedes"
 )
 
 // Mercedes is an api.Vehicle implementation for Mercedes cars

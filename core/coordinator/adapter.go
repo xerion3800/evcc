@@ -1,8 +1,8 @@
 package coordinator
 
 import (
-	"github.com/evcc-io/evcc/api"
-	"github.com/evcc-io/evcc/core/loadpoint"
+	"github.com/xerion3800/evcc/api"
+	"github.com/xerion3800/evcc/core/loadpoint"
 )
 
 type adapter struct {

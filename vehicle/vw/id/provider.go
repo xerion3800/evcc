@@ -5,8 +5,8 @@ import (
 	"strings"
 	"time"
 
-	"github.com/evcc-io/evcc/api"
-	"github.com/evcc-io/evcc/provider"
+	"github.com/xerion3800/evcc/api"
+	"github.com/xerion3800/evcc/provider"
 )
 
 // Provider is an api.Vehicle implementation for VW ID cars

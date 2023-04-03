@@ -4,8 +4,8 @@ import (
 	"testing"
 
 	"github.com/benbjohnson/clock"
-	"github.com/evcc-io/evcc/api"
-	"github.com/evcc-io/evcc/tariff/fixed"
+	"github.com/xerion3800/evcc/api"
+	"github.com/xerion3800/evcc/tariff/fixed"
 	"github.com/golang-module/carbon/v2"
 	"github.com/stretchr/testify/assert"
 )

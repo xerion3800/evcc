@@ -6,9 +6,9 @@ import (
 	"math"
 	"time"
 
-	"github.com/evcc-io/evcc/util"
-	"github.com/evcc-io/evcc/util/request"
-	"github.com/evcc-io/evcc/util/transport"
+	"github.com/xerion3800/evcc/util"
+	"github.com/xerion3800/evcc/util/request"
+	"github.com/xerion3800/evcc/util/transport"
 	"github.com/prometheus/client_golang/api"
 	v1 "github.com/prometheus/client_golang/api/prometheus/v1"
 	"github.com/prometheus/common/model"

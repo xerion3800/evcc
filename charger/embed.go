@@ -1,7 +1,7 @@
 package charger
 
 import (
-	"github.com/evcc-io/evcc/api"
+	"github.com/xerion3800/evcc/api"
 )
 
 type embed struct {

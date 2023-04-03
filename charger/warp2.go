@@ -6,12 +6,12 @@ import (
 	"fmt"
 	"time"
 
-	"github.com/evcc-io/evcc/api"
-	"github.com/evcc-io/evcc/charger/warp"
-	v2 "github.com/evcc-io/evcc/charger/warp/v2"
-	"github.com/evcc-io/evcc/provider"
-	"github.com/evcc-io/evcc/provider/mqtt"
-	"github.com/evcc-io/evcc/util"
+	"github.com/xerion3800/evcc/api"
+	"github.com/xerion3800/evcc/charger/warp"
+	v2 "github.com/xerion3800/evcc/charger/warp/v2"
+	"github.com/xerion3800/evcc/provider"
+	"github.com/xerion3800/evcc/provider/mqtt"
+	"github.com/xerion3800/evcc/util"
 	"golang.org/x/exp/slices"
 )
 

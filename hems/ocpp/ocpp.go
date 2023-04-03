@@ -6,11 +6,11 @@ import (
 	"strings"
 	"time"
 
-	"github.com/evcc-io/evcc/api"
-	"github.com/evcc-io/evcc/core/site"
-	"github.com/evcc-io/evcc/hems/ocpp/profile"
-	"github.com/evcc-io/evcc/util"
-	"github.com/evcc-io/evcc/util/machine"
+	"github.com/xerion3800/evcc/api"
+	"github.com/xerion3800/evcc/core/site"
+	"github.com/xerion3800/evcc/hems/ocpp/profile"
+	"github.com/xerion3800/evcc/util"
+	"github.com/xerion3800/evcc/util/machine"
 
 	ocpp16 "github.com/lorenzodonini/ocpp-go/ocpp1.6"
 	ocppcore "github.com/lorenzodonini/ocpp-go/ocpp1.6/core"

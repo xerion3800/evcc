@@ -8,10 +8,10 @@ import (
 	"net/url"
 	"strings"
 
-	"github.com/evcc-io/evcc/util"
-	"github.com/evcc-io/evcc/util/request"
-	"github.com/evcc-io/evcc/vehicle/renault/gigya"
-	"github.com/evcc-io/evcc/vehicle/renault/keys"
+	"github.com/xerion3800/evcc/util"
+	"github.com/xerion3800/evcc/util/request"
+	"github.com/xerion3800/evcc/vehicle/renault/gigya"
+	"github.com/xerion3800/evcc/vehicle/renault/keys"
 )
 
 type API struct {

@@ -25,18 +25,18 @@ import (
 	"strings"
 	"time"
 
-	"github.com/evcc-io/evcc/api"
-	"github.com/evcc-io/evcc/charger/echarge"
-	"github.com/evcc-io/evcc/charger/echarge/ecb1"
-	"github.com/evcc-io/evcc/meter/obis"
-	"github.com/evcc-io/evcc/provider"
-	"github.com/evcc-io/evcc/util"
-	"github.com/evcc-io/evcc/util/request"
-	"github.com/evcc-io/evcc/util/sponsor"
+	"github.com/xerion3800/evcc/api"
+	"github.com/xerion3800/evcc/charger/echarge"
+	"github.com/xerion3800/evcc/charger/echarge/ecb1"
+	"github.com/xerion3800/evcc/meter/obis"
+	"github.com/xerion3800/evcc/provider"
+	"github.com/xerion3800/evcc/util"
+	"github.com/xerion3800/evcc/util/request"
+	"github.com/xerion3800/evcc/util/sponsor"
 )
 
 // http://apidoc.ecb1.de
-// https://github.com/evcc-io/evcc/discussions/778
+// https://github.com/xerion3800/evcc/discussions/778
 // https://ee-toolkit.com/electric-car-automated-charging
 
 // HardyBarth charger implementation

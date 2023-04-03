@@ -12,7 +12,7 @@ if [ -f ${HASSIO_OPTIONSFILE} ]; then
     
     if [ ! -f "${CONFIG}" ]; then
         echo "Config not found. Please create a config under ${CONFIG}."
-        echo "For details see evcc documentation at https://github.com/evcc-io/evcc#readme."
+        echo "For details see evcc documentation at https://github.com/xerion3800/evcc#readme."
     else
         if [ "${SQLITE_FILE}" ]; then
             echo "starting evcc: 'EVCC_DATABASE_DSN=${SQLITE_FILE} evcc --config ${CONFIG}'"

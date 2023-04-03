@@ -4,9 +4,9 @@ import (
 	"fmt"
 	"time"
 
-	"github.com/evcc-io/evcc/api"
-	"github.com/evcc-io/evcc/provider"
-	"github.com/evcc-io/evcc/util"
+	"github.com/xerion3800/evcc/api"
+	"github.com/xerion3800/evcc/provider"
+	"github.com/xerion3800/evcc/util"
 )
 
 // https://github.com/TA2k/ioBroker.smart-eq
@@ -64,7 +64,7 @@ func (v *Provider) Status() (api.ChargeStatus, error) {
 		return api.StatusNone, fmt.Errorf("unknown status/value: %d/%d", cs.Status, cs.Value)
 	}
 
-	// confirmed status/value/active combinations (https://github.com/evcc-io/evcc/discussions/5596#discussioncomment-4556035)
+	// confirmed status/value/active combinations (https://github.com/xerion3800/evcc/discussions/5596#discussioncomment-4556035)
 	// 0/0/active: charging
 	// 0/2/*:      connected
 	// 0/3/*:      disconnected

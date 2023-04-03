@@ -3,9 +3,9 @@ package core
 import (
 	"time"
 
-	"github.com/evcc-io/evcc/api"
-	"github.com/evcc-io/evcc/core/planner"
-	"github.com/evcc-io/evcc/core/soc"
+	"github.com/xerion3800/evcc/api"
+	"github.com/xerion3800/evcc/core/planner"
+	"github.com/xerion3800/evcc/core/soc"
 	"golang.org/x/exp/slices"
 )
 

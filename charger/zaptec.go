@@ -26,12 +26,12 @@ import (
 	"time"
 
 	"github.com/coreos/go-oidc/v3/oidc"
-	"github.com/evcc-io/evcc/api"
-	"github.com/evcc-io/evcc/charger/zaptec"
-	"github.com/evcc-io/evcc/provider"
-	"github.com/evcc-io/evcc/util"
-	"github.com/evcc-io/evcc/util/request"
-	"github.com/evcc-io/evcc/util/sponsor"
+	"github.com/xerion3800/evcc/api"
+	"github.com/xerion3800/evcc/charger/zaptec"
+	"github.com/xerion3800/evcc/provider"
+	"github.com/xerion3800/evcc/util"
+	"github.com/xerion3800/evcc/util/request"
+	"github.com/xerion3800/evcc/util/sponsor"
 	"github.com/samber/lo"
 	"golang.org/x/oauth2"
 )

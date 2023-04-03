@@ -3,9 +3,9 @@ package vehicle
 import (
 	"time"
 
-	"github.com/evcc-io/evcc/api"
-	"github.com/evcc-io/evcc/util"
-	"github.com/evcc-io/evcc/vehicle/bluelink"
+	"github.com/xerion3800/evcc/api"
+	"github.com/xerion3800/evcc/util"
+	"github.com/xerion3800/evcc/vehicle/bluelink"
 )
 
 // Bluelink is an api.Vehicle implementation

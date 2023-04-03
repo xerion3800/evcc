@@ -5,7 +5,7 @@ package charger
 import (
 	"errors"
 
-	"github.com/evcc-io/evcc/api"
+	"github.com/xerion3800/evcc/api"
 )
 
 func init() {

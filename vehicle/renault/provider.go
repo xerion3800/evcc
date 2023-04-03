@@ -5,10 +5,10 @@ import (
 	"strings"
 	"time"
 
-	"github.com/evcc-io/evcc/api"
-	"github.com/evcc-io/evcc/provider"
-	"github.com/evcc-io/evcc/util/request"
-	"github.com/evcc-io/evcc/vehicle/renault/kamereon"
+	"github.com/xerion3800/evcc/api"
+	"github.com/xerion3800/evcc/provider"
+	"github.com/xerion3800/evcc/util/request"
+	"github.com/xerion3800/evcc/vehicle/renault/kamereon"
 	"golang.org/x/exp/slices"
 )
 

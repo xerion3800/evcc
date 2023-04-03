@@ -5,7 +5,7 @@ import (
 	"sync"
 	"time"
 
-	"github.com/evcc-io/evcc/util"
+	"github.com/xerion3800/evcc/util"
 	"github.com/imdario/mergo"
 	"gitlab.com/bboehmke/sunny"
 )

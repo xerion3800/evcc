@@ -8,8 +8,8 @@ import (
 	"strings"
 
 	xj "github.com/basgys/goxml2json"
-	"github.com/evcc-io/evcc/provider/javascript"
-	"github.com/evcc-io/evcc/util/jq"
+	"github.com/xerion3800/evcc/provider/javascript"
+	"github.com/xerion3800/evcc/util/jq"
 	"github.com/itchyny/gojq"
 	"github.com/robertkrimen/otto"
 	"github.com/volkszaehler/mbmd/meters/rs485"

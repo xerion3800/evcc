@@ -3,9 +3,9 @@ package meter
 import (
 	"encoding/binary"
 
-	"github.com/evcc-io/evcc/api"
-	"github.com/evcc-io/evcc/util"
-	"github.com/evcc-io/evcc/util/modbus"
+	"github.com/xerion3800/evcc/api"
+	"github.com/xerion3800/evcc/util"
+	"github.com/xerion3800/evcc/util/modbus"
 )
 
 const (

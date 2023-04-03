@@ -6,11 +6,11 @@ import (
 	"strconv"
 	"time"
 
-	"github.com/evcc-io/evcc/api"
-	"github.com/evcc-io/evcc/charger/daheimladen"
-	"github.com/evcc-io/evcc/provider"
-	"github.com/evcc-io/evcc/util"
-	"github.com/evcc-io/evcc/util/request"
+	"github.com/xerion3800/evcc/api"
+	"github.com/xerion3800/evcc/charger/daheimladen"
+	"github.com/xerion3800/evcc/provider"
+	"github.com/xerion3800/evcc/util"
+	"github.com/xerion3800/evcc/util/request"
 	"golang.org/x/oauth2"
 )
 

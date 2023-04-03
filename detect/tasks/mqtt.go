@@ -7,7 +7,7 @@ import (
 	"time"
 
 	mqtt "github.com/eclipse/paho.mqtt.golang"
-	"github.com/evcc-io/evcc/util"
+	"github.com/xerion3800/evcc/util"
 )
 
 const Mqtt TaskType = "mqtt"

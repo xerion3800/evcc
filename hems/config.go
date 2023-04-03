@@ -4,10 +4,10 @@ import (
 	"errors"
 	"strings"
 
-	"github.com/evcc-io/evcc/core/site"
-	"github.com/evcc-io/evcc/hems/ocpp"
-	"github.com/evcc-io/evcc/hems/semp"
-	"github.com/evcc-io/evcc/server"
+	"github.com/xerion3800/evcc/core/site"
+	"github.com/xerion3800/evcc/hems/ocpp"
+	"github.com/xerion3800/evcc/hems/semp"
+	"github.com/xerion3800/evcc/server"
 )
 
 // HEMS describes the HEMS system interface

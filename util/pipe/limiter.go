@@ -4,7 +4,7 @@ import (
 	"time"
 
 	"github.com/benbjohnson/clock"
-	"github.com/evcc-io/evcc/util"
+	"github.com/xerion3800/evcc/util"
 	"golang.org/x/exp/slices"
 )
 

@@ -3,8 +3,8 @@ package configure
 import (
 	"fmt"
 
-	"github.com/evcc-io/evcc/charger/eebus"
-	"github.com/evcc-io/evcc/cmd/shutdown"
+	"github.com/xerion3800/evcc/charger/eebus"
+	"github.com/xerion3800/evcc/cmd/shutdown"
 )
 
 // configureEEBus setup EEBus

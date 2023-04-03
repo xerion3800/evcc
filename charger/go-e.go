@@ -22,10 +22,10 @@ import (
 	"fmt"
 	"time"
 
-	"github.com/evcc-io/evcc/api"
-	goe "github.com/evcc-io/evcc/charger/go-e"
-	"github.com/evcc-io/evcc/util"
-	// "github.com/evcc-io/evcc/util/sponsor"
+	"github.com/xerion3800/evcc/api"
+	goe "github.com/xerion3800/evcc/charger/go-e"
+	"github.com/xerion3800/evcc/util"
+	// "github.com/xerion3800/evcc/util/sponsor"
 )
 
 // https://go-e.co/app/api.pdf

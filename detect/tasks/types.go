@@ -1,7 +1,7 @@
 package tasks
 
 import (
-	"github.com/evcc-io/evcc/util"
+	"github.com/xerion3800/evcc/util"
 	"github.com/jinzhu/copier"
 )
 

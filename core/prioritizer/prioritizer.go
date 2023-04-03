@@ -1,7 +1,7 @@
 package prioritizer
 
 import (
-	"github.com/evcc-io/evcc/core/loadpoint"
+	"github.com/xerion3800/evcc/core/loadpoint"
 )
 
 type Prioritizer struct {

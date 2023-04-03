@@ -3,8 +3,8 @@ package charger
 import (
 	"testing"
 
-	"github.com/evcc-io/evcc/util/templates"
-	"github.com/evcc-io/evcc/util/test"
+	"github.com/xerion3800/evcc/util/templates"
+	"github.com/xerion3800/evcc/util/test"
 )
 
 var acceptable = []string{
@@ -22,7 +22,7 @@ var acceptable = []string{
 	"recv timeout",
 	"(Client.Timeout exceeded while awaiting headers)",
 	"can only have either uri or device", // modbus
-	"sponsorship required, see https://github.com/evcc-io/evcc#sponsorship",
+	"sponsorship required, see https://github.com/xerion3800/evcc#sponsorship",
 	"eebus not configured",
 	"context deadline exceeded",
 }

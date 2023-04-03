@@ -3,7 +3,7 @@ package wrapper
 import (
 	"fmt"
 
-	"github.com/evcc-io/evcc/api"
+	"github.com/xerion3800/evcc/api"
 )
 
 // Wrapper wraps an api.Vehicle to capture initialization errors

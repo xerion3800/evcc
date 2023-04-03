@@ -10,8 +10,8 @@ import (
 	"strings"
 	"time"
 
-	"github.com/evcc-io/evcc/util"
-	"github.com/evcc-io/evcc/util/request"
+	"github.com/xerion3800/evcc/util"
+	"github.com/xerion3800/evcc/util/request"
 	"github.com/google/go-github/v32/github"
 	"github.com/hashicorp/go-version"
 	"golang.org/x/oauth2"
@@ -19,7 +19,7 @@ import (
 
 const (
 	owner      = "evcc-io"
-	repository = "evcc"
+	repository = "xerion3800"
 
 	timeout = 30 * time.Second
 )

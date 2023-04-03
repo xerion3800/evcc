@@ -8,7 +8,7 @@ import (
 	"sync"
 	"time"
 
-	"github.com/evcc-io/evcc/util"
+	"github.com/xerion3800/evcc/util"
 	"gitlab.com/bboehmke/sunny"
 )
 

@@ -4,9 +4,9 @@ import (
 	"errors"
 	"strconv"
 
-	"github.com/evcc-io/evcc/api"
-	"github.com/evcc-io/evcc/meter/fritzdect"
-	"github.com/evcc-io/evcc/util"
+	"github.com/xerion3800/evcc/api"
+	"github.com/xerion3800/evcc/meter/fritzdect"
+	"github.com/xerion3800/evcc/util"
 )
 
 // AVM FritzBox AHA interface specifications:

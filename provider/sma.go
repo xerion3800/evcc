@@ -4,8 +4,8 @@ import (
 	"errors"
 	"fmt"
 
-	"github.com/evcc-io/evcc/provider/sma"
-	"github.com/evcc-io/evcc/util"
+	"github.com/xerion3800/evcc/provider/sma"
+	"github.com/xerion3800/evcc/util"
 	"gitlab.com/bboehmke/sunny"
 )
 

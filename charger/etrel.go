@@ -22,10 +22,10 @@ import (
 	"fmt"
 	"math"
 
-	"github.com/evcc-io/evcc/api"
-	"github.com/evcc-io/evcc/util"
-	"github.com/evcc-io/evcc/util/modbus"
-	"github.com/evcc-io/evcc/util/sponsor"
+	"github.com/xerion3800/evcc/api"
+	"github.com/xerion3800/evcc/util"
+	"github.com/xerion3800/evcc/util/modbus"
+	"github.com/xerion3800/evcc/util/sponsor"
 	"github.com/volkszaehler/mbmd/encoding"
 )
 
@@ -42,7 +42,7 @@ const (
 	etrelRegHWVersion     = 1010
 	etrelRegSWVersion     = 1015
 
-	// Always zero, see https://github.com/evcc-io/evcc/issues/5346
+	// Always zero, see https://github.com/xerion3800/evcc/issues/5346
 	//etrelRegSessionEnergy = 30
 	//etrelRegChargeTime    = 32
 

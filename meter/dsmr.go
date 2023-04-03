@@ -15,9 +15,9 @@ import (
 	"github.com/basvdlei/gotsmart/crc16"
 	"github.com/basvdlei/gotsmart/dsmr"
 	"github.com/cenkalti/backoff"
-	"github.com/evcc-io/evcc/api"
-	"github.com/evcc-io/evcc/util"
-	"github.com/evcc-io/evcc/util/request"
+	"github.com/xerion3800/evcc/api"
+	"github.com/xerion3800/evcc/util"
+	"github.com/xerion3800/evcc/util/request"
 )
 
 // github.com/basvdlei/gotsmart package is subject to the following license:

@@ -1,8 +1,8 @@
 package vehicle
 
 import (
-	"github.com/evcc-io/evcc/api"
-	"github.com/evcc-io/evcc/util/templates"
+	"github.com/xerion3800/evcc/api"
+	"github.com/xerion3800/evcc/util/templates"
 )
 
 func init() {

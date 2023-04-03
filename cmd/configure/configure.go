@@ -6,8 +6,8 @@ import (
 	"text/template"
 
 	"github.com/Masterminds/sprig/v3"
-	"github.com/evcc-io/evcc/util/machine"
-	"github.com/evcc-io/evcc/util/templates"
+	"github.com/xerion3800/evcc/util/machine"
+	"github.com/xerion3800/evcc/util/templates"
 )
 
 type device struct {

@@ -7,7 +7,7 @@ import (
 	"sync/atomic"
 	"time"
 
-	"github.com/evcc-io/evcc/server/db"
+	"github.com/xerion3800/evcc/server/db"
 	"golang.org/x/exp/slices"
 )
 
