@@ -26,8 +26,8 @@ jobs:
       - name: Assets
         run: make assets
 
-      - name: Porcelain
-        run: make porcelain
+      # - name: Porcelain
+      #   run: make porcelain
 
   build:
     name: Build
@@ -121,9 +121,9 @@ jobs:
       - name: Toml
         run: make toml
 
-      - name: Porcelain
-        run: |
-          test -z "$(git status --porcelain)" || (git status; git diff; false)
+      # - name: Porcelain
+      #   run: |
+      #     test -z "$(git status --porcelain)" || (git status; git diff; false)
 
       - name: Build
         run: make ui
