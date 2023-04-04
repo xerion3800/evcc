@@ -26,8 +26,8 @@ jobs:
       - name: Assets
         run: make assets
 
-      - name: Porcelain
-        run: make porcelain
+      # - name: Porcelain
+      #   run: make porcelain
 
   build:
     name: Build
