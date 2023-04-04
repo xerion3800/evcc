@@ -13,7 +13,7 @@ LD_FLAGS := -X github.com/xerion3800/evcc/server.Version=$(VERSION) -X github.co
 BUILD_ARGS := -ldflags='$(LD_FLAGS)'
 
 # docker
-DOCKER_IMAGE := evcc/evcc
+DOCKER_IMAGE := xerion3800/evcc
 PLATFORM := linux/amd64,linux/arm64,linux/arm/v6
 
 # gokrazy image
