@@ -415,6 +415,7 @@ func (lp *Loadpoint) evChargeStopHandler() {
 	}
 
 	// soc update reset
+	provider.ResetCached()
 	lp.socUpdated = time.Time{}
 
 	// reset pv enable/disable timer
