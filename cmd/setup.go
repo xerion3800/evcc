@@ -3,7 +3,7 @@ package cmd
 import (
 	"errors"
 	"fmt"
-	"github.com/evcc-io/evcc/provider/golang"
+	"github.com/xerion3800/evcc/provider/golang"
 	"strconv"
 	"strings"
 	"time"
