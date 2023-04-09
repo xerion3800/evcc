@@ -16,6 +16,7 @@ import (
 	"github.com/xerion3800/evcc/core/planner"
 	"github.com/xerion3800/evcc/core/soc"
 	"github.com/xerion3800/evcc/core/wrapper"
+	"github.com/xerion3800/evcc/provider"
 	"github.com/xerion3800/evcc/push"
 	"github.com/xerion3800/evcc/util"
 
