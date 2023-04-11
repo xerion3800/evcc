@@ -3,13 +3,13 @@ package cmd
 import (
 	"errors"
 	"fmt"
-	"github.com/xerion3800/evcc/provider/golang"
 	"strconv"
 	"strings"
 	"time"
 
 	paho "github.com/eclipse/paho.mqtt.golang"
 	"github.com/xerion3800/evcc/api"
+	"github.com/xerion3800/evcc/util/sponsor"
 	"github.com/xerion3800/evcc/charger/eebus"
 	"github.com/xerion3800/evcc/cmd/shutdown"
 	"github.com/xerion3800/evcc/core"
@@ -22,12 +22,11 @@ import (
 	"github.com/xerion3800/evcc/server/db"
 	"github.com/xerion3800/evcc/server/db/settings"
 	"github.com/xerion3800/evcc/tariff"
-	"github.com/xerion3800/evcc/util"
-	"github.com/xerion3800/evcc/util/locale"
-	"github.com/xerion3800/evcc/util/machine"
-	"github.com/xerion3800/evcc/util/pipe"
 	"github.com/xerion3800/evcc/util/request"
-	"github.com/xerion3800/evcc/util/sponsor"
+	"github.com/xerion3800/evcc/util/pipe"
+	"github.com/xerion3800/evcc/util/locale"
+	"github.com/xerion3800/evcc/util"
+	"github.com/xerion3800/evcc/util/machine"
 	"github.com/libp2p/zeroconf/v2"
 	"github.com/spf13/cobra"
 	"github.com/spf13/viper"
@@ -112,17 +111,21 @@ func configureEnvironment(cmd *cobra.Command, conf config) (err error) {
 
 // configureDatabase configures session database
 func configureDatabase(conf dbConfig) error {
-	err := db.NewInstance(conf.Type, conf.Dsn)
-	if err == nil {
-		if err = settings.Init(); err == nil {
-			shutdown.Register(func() {
-				if err := settings.Persist(); err != nil {
-					log.ERROR.Println("cannot save settings:", err)
-				}
-			})
-		}
+	if err := db.NewInstance(conf.Type, conf.Dsn); err != nil {
+		return err
 	}
-	return err
+
+	if err := settings.Init(); err != nil {
+		return err
+	}
+
+	shutdown.Register(func() {
+		if err := settings.Persist(); err != nil {
+			log.ERROR.Println("cannot save settings:", err)
+		}
+	})
+
+	return nil
 }
 
 // configureInflux configures influx database
@@ -148,11 +151,10 @@ func configureMQTT(conf mqttConfig) error {
 	log := util.NewLogger("mqtt")
 
 	var err error
-	mqtt.Instance, err = mqtt.RegisteredClient(log, conf.Broker, conf.User, conf.Password, conf.ClientID, 1, conf.Insecure, func(options *paho.ClientOptions) {
+	if mqtt.Instance, err = mqtt.RegisteredClient(log, conf.Broker, conf.User, conf.Password, conf.ClientID, 1, conf.Insecure, func(options *paho.ClientOptions) {
 		topic := fmt.Sprintf("%s/status", strings.Trim(conf.Topic, "/"))
 		options.SetWill(topic, "offline", 1, true)
-	})
-	if err != nil {
+	}); err != nil {
 		return fmt.Errorf("failed configuring mqtt: %w", err)
 	}
 
@@ -278,31 +280,31 @@ func configureTariffs(conf tariffConfig) (tariff.Tariffs, error) {
 	return *tariffs, nil
 }
 
-func configureSiteAndLoadpoints(conf config) (site *core.Site, err error) {
-	if err = cp.configure(conf); err == nil {
-		var loadpoints []*core.Loadpoint
-		loadpoints, err = configureLoadpoints(conf, cp)
-
-		var tariffs tariff.Tariffs
-		if err == nil {
-			tariffs, err = configureTariffs(conf.Tariffs)
-		}
-
-		if err == nil {
-			// list of vehicles ordered by name
-			keys := maps.Keys(cp.vehicles)
-			slices.Sort(keys)
-
-			vehicles := make([]api.Vehicle, 0, len(cp.vehicles))
-			for _, k := range keys {
-				vehicles = append(vehicles, cp.vehicles[k])
-			}
-
-			site, err = configureSite(conf.Site, cp, loadpoints, vehicles, tariffs)
-		}
+func configureSiteAndLoadpoints(conf config) (*core.Site, error) {
+	if err := cp.configure(conf); err != nil {
+		return nil, err
 	}
 
-	return site, err
+	loadpoints, err := configureLoadpoints(conf, cp)
+	if err != nil {
+		return nil, fmt.Errorf("failed configuring loadpoints: %w", err)
+	}
+
+	tariffs, err := configureTariffs(conf.Tariffs)
+	if err != nil {
+		return nil, err
+	}
+
+	// list of vehicles ordered by name
+	keys := maps.Keys(cp.vehicles)
+	slices.Sort(keys)
+
+	vehicles := make([]api.Vehicle, 0, len(cp.vehicles))
+	for _, k := range keys {
+		vehicles = append(vehicles, cp.vehicles[k])
+	}
+
+	return configureSite(conf.Site, cp, loadpoints, vehicles, tariffs)
 }
 
 func configureSite(conf map[string]interface{}, cp *ConfigProvider, loadpoints []*core.Loadpoint, vehicles []api.Vehicle, tariffs tariff.Tariffs) (*core.Site, error) {

@@ -25,6 +25,9 @@ var acceptable = []string{
 	"sponsorship required, see https://github.com/xerion3800/evcc#sponsorship",
 	"eebus not configured",
 	"context deadline exceeded",
+	"missing credentials",
+	"timeout",                    // ocpp
+	"must have uri and password", // Wattpilot
 }
 
 func TestTemplates(t *testing.T) {
