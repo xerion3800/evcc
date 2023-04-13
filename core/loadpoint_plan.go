@@ -11,7 +11,7 @@ import (
 
 const (
 	smallSlotDuration = 10 * time.Minute // small planner slot duration we might ignore
-	smallGapDuration  = 30 * time.Minute // small gap duration between planner slots we might ignore
+	smallGapDuration  = 60 * time.Minute // small gap duration between planner slots we might ignore
 )
 
 // setPlanActive updates plan active flag
@@ -143,7 +143,7 @@ func (lp *Loadpoint) plannerActive() (active bool) {
 			// don't stop an already running slot if goal was not met
 			lp.log.DEBUG.Println("continuing until end of slot")
 			return true
-		case requiredDuration < 30*time.Minute:
+		case requiredDuration < smallGapDuration:
 			lp.log.DEBUG.Printf("continuing for remaining %v", requiredDuration.Round(time.Second))
 			return true
 		case lp.clock.Until(planStart) < smallGapDuration:
