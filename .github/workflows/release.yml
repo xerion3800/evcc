@@ -96,7 +96,7 @@ jobs:
       #     version: latest
       #     args: release --clean
       #   env:
-      #     # use GH_TOKEN for access to evcc-io/homebrew-tap
+      #     # use GH_TOKEN for access to xerion3800/homebrew-tap
       #     GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
 
       # - name: Publish .deb to Cloudsmith

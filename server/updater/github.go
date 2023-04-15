@@ -18,7 +18,7 @@ import (
 )
 
 const (
-	owner      = "evcc-io"
+	owner      = "xerion3800"
 	repository = "xerion3800"
 
 	timeout = 30 * time.Second

@@ -3,9 +3,9 @@
 [![Build Status](https://github.com/xerion3800/evcc/workflows/Build/badge.svg)](https://github.com/xerion3800/evcc/actions?query=workflow%3ABuild)
 [![Code Quality](https://goreportcard.com/badge/github.com/xerion3800/evcc)](https://goreportcard.com/report/github.com/xerion3800/evcc)
 [![Translation](https://hosted.weblate.org/widgets/evcc/-/evcc/svg-badge.svg)](https://hosted.weblate.org/engage/evcc/)
-[![Open in Visual Studio Code](https://img.shields.io/static/v1?logo=visualstudiocode&label=&message=Open%20in%20VS%20Code&labelColor=2c2c32&color=007acc&logoColor=007acc)](https://open.vscode.dev/evcc-io/evcc)
+[![Open in Visual Studio Code](https://img.shields.io/static/v1?logo=visualstudiocode&label=&message=Open%20in%20VS%20Code&labelColor=2c2c32&color=007acc&logoColor=007acc)](https://open.vscode.dev/xerion3800/evcc)
 [![OSS hosting by cloudsmith](https://img.shields.io/badge/OSS%20hosting%20by-cloudsmith-blue?logo=cloudsmith)](https://cloudsmith.io/~evcc/packages/)
-[![Latest Version](https://img.shields.io/github/release/evcc-io/evcc.svg)](https://github.com/xerion3800/evcc/releases)
+[![Latest Version](https://img.shields.io/github/release/xerion3800/evcc.svg)](https://github.com/xerion3800/evcc/releases)
 
 evcc is an extensible EV Charge Controller with PV integration implemented in [Go][2]. Featured in [PV magazine](https://www.pv-magazine.de/2021/01/15/selbst-ist-der-groeoenlandhof-wallbox-ladesteuerung-selbst-gebaut/).
 
@@ -98,7 +98,7 @@ Maintaining evcc consumes time and effort. With the vast amount of different dev
 
 While evcc is open source, we would also like to encourage vendors to provide open source hardware devices, public documentation and support open source projects like ours that provide additional value to otherwise closed hardware. Where this is not the case, evcc requires "sponsor token" to finance ongoing development and support of evcc.
 
-The personal sponsor token requires a [Github Sponsorship](https://github.com/sponsors/evcc-io) and can be requested at [sponsor.evcc.io](https://sponsor.evcc.io/).
+The personal sponsor token requires a [Github Sponsorship](https://github.com/sponsors/xerion3800) and can be requested at [sponsor.evcc.io](https://sponsor.evcc.io/).
 
 [1]: https://golang.org
 [2]: https://nodejs.org/

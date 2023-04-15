@@ -1273,7 +1273,7 @@ func (lp *Loadpoint) updateChargeVoltages() {
 func (lp *Loadpoint) publishChargeProgress() {
 	if f, err := lp.chargeRater.ChargedEnergy(); err == nil {
 		// workaround for Go-E resetting during disconnect, see
-		// https://github.com/evcc-io/evcc/issues/5092
+		// https://github.com/xerion3800/evcc/issues/5092
 		if f > lp.chargedAtStartup {
 			lp.setChargedEnergy(1e3 * (f - lp.chargedAtStartup)) // convert to Wh
 		}

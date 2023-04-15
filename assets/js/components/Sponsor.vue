@@ -33,7 +33,7 @@
 		>
 			<a
 				target="_blank"
-				href="https://github.com/sponsors/evcc-io"
+				href="https://github.com/sponsors/xerion3800"
 				class="btn btn-outline-primary mb-3 become-sponsor"
 			>
 				<shopicon-regular-heart class="me-1 d-inline-block"></shopicon-regular-heart>
