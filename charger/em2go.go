@@ -25,7 +25,6 @@ import (
 	"github.com/xerion3800/evcc/api"
 	"github.com/xerion3800/evcc/util"
 	"github.com/xerion3800/evcc/util/modbus"
-	"github.com/xerion3800/evcc/util/sponsor"
 	"github.com/volkszaehler/mbmd/meters/rs485"
 )
 
@@ -82,10 +81,6 @@ func NewEm2Go(uri string, slaveID uint8) (api.Charger, error) {
 	conn, err := modbus.NewConnection(uri, "", "", 0, modbus.Tcp, slaveID)
 	if err != nil {
 		return nil, err
-	}
-
-	if !sponsor.IsAuthorized() {
-		return nil, api.ErrSponsorRequired
 	}
 
 	log := util.NewLogger("em2go")
