@@ -144,12 +144,9 @@ func (m *Client) Listen(topic string, callback func(string)) {
 // ListenSetter creates a /set listener that resets the payload after handling
 func (m *Client) ListenSetter(topic string, callback func(string)) {
 	m.Listen(topic, func(payload string) {
-		// short-circuit payload reset
-		if payload != "" {
-			callback(payload)
-			if err := m.Publish(topic, true, ""); err != nil {
-				m.log.ERROR.Printf("clear %s: %v", topic, err)
-			}
+		callback(payload)
+		if err := m.Publish(topic, true, ""); err != nil {
+			m.log.ERROR.Printf("clear %s: %v", topic, err)
 		}
 	})
 }
@@ -161,24 +158,22 @@ func (m *Client) listen(topic string) {
 		m.log.TRACE.Printf("recv %s: '%v'", topic, payload)
 		if len(payload) > 0 {
 			m.mux.Lock()
-			callbacks := m.listener[topic]
-			m.mux.Unlock()
-
-			for _, cb := range callbacks {
-				cb(payload)
+			for _, cb := range m.listener[topic] {
+				go cb(payload)
 			}
+			m.mux.Unlock()
 		}
 	})
-	m.WaitForToken(token)
+	m.WaitForToken("subscribe", topic, token)
 }
 
 // WaitForToken synchronously waits until token operation completed
-func (m *Client) WaitForToken(token paho.Token) {
+func (m *Client) WaitForToken(action, topic string, token paho.Token) {
+	err := api.ErrTimeout
 	if token.WaitTimeout(publishTimeout) {
-		if token.Error() != nil {
-			m.log.ERROR.Printf("error: %s", token.Error())
-		}
-	} else {
-		m.log.DEBUG.Println("timeout")
+		err = token.Error()
+	}
+	if err != nil {
+		m.log.ERROR.Printf("%s: %s: %v", action, topic, err)
 	}
 }
