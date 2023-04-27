@@ -9,8 +9,8 @@ import (
 	"text/template"
 
 	"github.com/Masterminds/sprig/v3"
-	"github.com/xerion3800/evcc/core"
-	"github.com/xerion3800/evcc/server"
+	"github.com/evcc-io/evcc/core"
+	"github.com/evcc-io/evcc/server"
 	"github.com/spf13/cobra"
 )
 

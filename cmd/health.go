@@ -8,7 +8,7 @@ import (
 	"os"
 	"time"
 
-	"github.com/xerion3800/evcc/server"
+	"github.com/evcc-io/evcc/server"
 	"github.com/spf13/cobra"
 	"github.com/tv42/httpunix"
 )

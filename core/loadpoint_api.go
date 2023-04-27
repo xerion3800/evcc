@@ -6,9 +6,9 @@ import (
 	"math"
 	"time"
 
-	"github.com/xerion3800/evcc/api"
-	"github.com/xerion3800/evcc/core/loadpoint"
-	"github.com/xerion3800/evcc/core/wrapper"
+	"github.com/evcc-io/evcc/api"
+	"github.com/evcc-io/evcc/core/loadpoint"
+	"github.com/evcc-io/evcc/core/wrapper"
 )
 
 var _ loadpoint.API = (*Loadpoint)(nil)

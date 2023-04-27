@@ -8,7 +8,7 @@ builds:
     flags:
       - -tags=release
     ldflags:
-      - -X github.com/xerion3800/evcc/server.Version={{ .Tag }} -X github.com/xerion3800/evcc/server.Commit={{ .ShortCommit }} -s -w
+      - -X github.com/evcc-io/evcc/server.Version={{ .Tag }} -X github.com/evcc-io/evcc/server.Commit={{ .ShortCommit }} -s -w
     goos:
       - linux
     goarch:

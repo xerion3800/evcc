@@ -4,7 +4,7 @@ import (
 	"errors"
 	"strings"
 
-	"github.com/xerion3800/evcc/util"
+	"github.com/evcc-io/evcc/util"
 	"github.com/gregdel/pushover"
 )
 

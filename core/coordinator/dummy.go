@@ -1,7 +1,7 @@
 package coordinator
 
 import (
-	"github.com/xerion3800/evcc/api"
+	"github.com/evcc-io/evcc/api"
 )
 
 type dummy struct{}

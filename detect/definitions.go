@@ -1,7 +1,7 @@
 package detect
 
 import (
-	"github.com/xerion3800/evcc/detect/tasks"
+	"github.com/evcc-io/evcc/detect/tasks"
 )
 
 var (

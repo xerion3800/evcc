@@ -6,10 +6,10 @@ import (
 	"sync"
 	"time"
 
-	"github.com/xerion3800/evcc/api"
-	"github.com/xerion3800/evcc/meter/tibber"
-	"github.com/xerion3800/evcc/util"
-	"github.com/xerion3800/evcc/util/request"
+	"github.com/evcc-io/evcc/api"
+	"github.com/evcc-io/evcc/meter/tibber"
+	"github.com/evcc-io/evcc/util"
+	"github.com/evcc-io/evcc/util/request"
 	"github.com/shurcooL/graphql"
 	"golang.org/x/exp/slices"
 )

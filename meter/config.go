@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"strings"
 
-	"github.com/xerion3800/evcc/api"
+	"github.com/evcc-io/evcc/api"
 )
 
 type meterRegistry map[string]func(map[string]interface{}) (api.Meter, error)

@@ -1,7 +1,7 @@
 package profile
 
 import (
-	"github.com/xerion3800/evcc/util"
+	"github.com/evcc-io/evcc/util"
 	sc "github.com/lorenzodonini/ocpp-go/ocpp1.6/smartcharging"
 )
 

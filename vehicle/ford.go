@@ -4,9 +4,9 @@ import (
 	"fmt"
 	"time"
 
-	"github.com/xerion3800/evcc/api"
-	"github.com/xerion3800/evcc/util"
-	"github.com/xerion3800/evcc/vehicle/ford"
+	"github.com/evcc-io/evcc/api"
+	"github.com/evcc-io/evcc/util"
+	"github.com/evcc-io/evcc/vehicle/ford"
 )
 
 // https://github.com/d4v3y0rk/ffpass-module

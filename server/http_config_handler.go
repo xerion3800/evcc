@@ -6,11 +6,11 @@ import (
 	"net/http"
 	"strings"
 
-	"github.com/xerion3800/evcc/api"
-	"github.com/xerion3800/evcc/charger"
-	"github.com/xerion3800/evcc/meter"
-	"github.com/xerion3800/evcc/util/templates"
-	"github.com/xerion3800/evcc/vehicle"
+	"github.com/evcc-io/evcc/api"
+	"github.com/evcc-io/evcc/charger"
+	"github.com/evcc-io/evcc/meter"
+	"github.com/evcc-io/evcc/util/templates"
+	"github.com/evcc-io/evcc/vehicle"
 	"github.com/gorilla/mux"
 	"golang.org/x/exp/slices"
 )

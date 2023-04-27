@@ -9,9 +9,9 @@ import (
 	"strings"
 	"time"
 
-	"github.com/xerion3800/evcc/util"
-	"github.com/xerion3800/evcc/util/oauth"
-	"github.com/xerion3800/evcc/util/request"
+	"github.com/evcc-io/evcc/util"
+	"github.com/evcc-io/evcc/util/oauth"
+	"github.com/evcc-io/evcc/util/request"
 	cv "github.com/nirasan/go-oauth-pkce-code-verifier"
 	"golang.org/x/net/publicsuffix"
 	"golang.org/x/oauth2"

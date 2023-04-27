@@ -3,8 +3,8 @@ package provider
 import (
 	"strconv"
 
-	"github.com/xerion3800/evcc/provider/pipeline"
-	"github.com/xerion3800/evcc/util"
+	"github.com/evcc-io/evcc/provider/pipeline"
+	"github.com/evcc-io/evcc/util"
 )
 
 type constProvider struct {

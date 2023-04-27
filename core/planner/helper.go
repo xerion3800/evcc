@@ -3,7 +3,7 @@ package planner
 import (
 	"time"
 
-	"github.com/xerion3800/evcc/api"
+	"github.com/evcc-io/evcc/api"
 )
 
 func Start(plan api.Rates) time.Time {

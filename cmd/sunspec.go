@@ -9,7 +9,7 @@ import (
 	sunspec "github.com/andig/gosunspec"
 	bus "github.com/andig/gosunspec/modbus"
 	"github.com/andig/gosunspec/smdx"
-	"github.com/xerion3800/evcc/util"
+	"github.com/evcc-io/evcc/util"
 	"github.com/spf13/cobra"
 	"github.com/spf13/viper"
 	"github.com/volkszaehler/mbmd/meters"

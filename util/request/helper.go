@@ -5,8 +5,8 @@ import (
 	"net/http"
 	"time"
 
-	"github.com/xerion3800/evcc/util"
-	"github.com/xerion3800/evcc/util/transport"
+	"github.com/evcc-io/evcc/util"
+	"github.com/evcc-io/evcc/util/transport"
 )
 
 // Timeout is the default request timeout used by the Helper

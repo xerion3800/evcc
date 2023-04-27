@@ -3,8 +3,8 @@ package core
 import (
 	"errors"
 
-	"github.com/xerion3800/evcc/api"
-	"github.com/xerion3800/evcc/core/site"
+	"github.com/evcc-io/evcc/api"
+	"github.com/evcc-io/evcc/core/site"
 )
 
 var _ site.API = (*Site)(nil)

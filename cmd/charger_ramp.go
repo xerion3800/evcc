@@ -6,7 +6,7 @@ import (
 	"strconv"
 	"time"
 
-	"github.com/xerion3800/evcc/api"
+	"github.com/evcc-io/evcc/api"
 	"github.com/spf13/cobra"
 )
 

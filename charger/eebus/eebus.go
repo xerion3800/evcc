@@ -18,8 +18,8 @@ import (
 	"github.com/enbility/cemd/emobility"
 	"github.com/enbility/eebus-go/service"
 	"github.com/enbility/eebus-go/spine/model"
-	"github.com/xerion3800/evcc/util"
-	"github.com/xerion3800/evcc/util/machine"
+	"github.com/evcc-io/evcc/util"
+	"github.com/evcc-io/evcc/util/machine"
 )
 
 const (

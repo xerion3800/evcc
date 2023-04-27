@@ -4,7 +4,7 @@ import (
 	"errors"
 	"fmt"
 
-	"github.com/xerion3800/evcc/util/templates"
+	"github.com/evcc-io/evcc/util/templates"
 	"golang.org/x/exp/slices"
 )
 

@@ -6,9 +6,9 @@ import (
 	"strings"
 
 	"github.com/coreos/go-oidc/v3/oidc"
-	"github.com/xerion3800/evcc/util"
-	"github.com/xerion3800/evcc/util/oauth"
-	"github.com/xerion3800/evcc/util/request"
+	"github.com/evcc-io/evcc/util"
+	"github.com/evcc-io/evcc/util/oauth"
+	"github.com/evcc-io/evcc/util/request"
 	"golang.org/x/oauth2"
 )
 

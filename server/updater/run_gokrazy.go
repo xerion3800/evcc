@@ -6,8 +6,8 @@ import (
 	"fmt"
 	"net/http"
 
-	"github.com/xerion3800/evcc/server"
-	"github.com/xerion3800/evcc/util"
+	"github.com/evcc-io/evcc/server"
+	"github.com/evcc-io/evcc/util"
 	"github.com/google/go-github/v32/github"
 )
 

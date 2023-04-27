@@ -5,9 +5,9 @@ import (
 	"fmt"
 	"strings"
 
-	"github.com/xerion3800/evcc/api"
-	"github.com/xerion3800/evcc/meter/tplink"
-	"github.com/xerion3800/evcc/util"
+	"github.com/evcc-io/evcc/api"
+	"github.com/evcc-io/evcc/meter/tplink"
+	"github.com/evcc-io/evcc/util"
 )
 
 // TPLink charger implementation

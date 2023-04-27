@@ -4,8 +4,8 @@ import (
 	"fmt"
 	"reflect"
 
-	"github.com/xerion3800/evcc/provider/golang"
-	"github.com/xerion3800/evcc/util"
+	"github.com/evcc-io/evcc/provider/golang"
+	"github.com/evcc-io/evcc/util"
 	"github.com/traefik/yaegi/interp"
 )
 

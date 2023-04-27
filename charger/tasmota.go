@@ -5,9 +5,9 @@ import (
 	"fmt"
 	"strings"
 
-	"github.com/xerion3800/evcc/api"
-	"github.com/xerion3800/evcc/meter/tasmota"
-	"github.com/xerion3800/evcc/util"
+	"github.com/evcc-io/evcc/api"
+	"github.com/evcc-io/evcc/meter/tasmota"
+	"github.com/evcc-io/evcc/util"
 )
 
 // Tasmota project homepage

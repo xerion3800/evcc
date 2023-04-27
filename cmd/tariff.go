@@ -5,7 +5,7 @@ import (
 	"os"
 	"text/tabwriter"
 
-	"github.com/xerion3800/evcc/tariff"
+	"github.com/evcc-io/evcc/tariff"
 	"github.com/spf13/cobra"
 )
 

@@ -76,7 +76,7 @@
 			<li>
 				<a
 					class="dropdown-item d-flex"
-					href="https://github.com/xerion3800/evcc"
+					href="https://github.com/evcc-io/evcc"
 					target="_blank"
 				>
 					<span>{{ $t("header.github") }}</span>

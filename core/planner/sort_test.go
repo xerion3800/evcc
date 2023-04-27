@@ -5,7 +5,7 @@ import (
 	"time"
 
 	"github.com/benbjohnson/clock"
-	"github.com/xerion3800/evcc/api"
+	"github.com/evcc-io/evcc/api"
 	"github.com/stretchr/testify/assert"
 	"golang.org/x/exp/slices"
 )

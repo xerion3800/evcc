@@ -1,6 +1,6 @@
 package modbus
 
-import "github.com/xerion3800/evcc/util"
+import "github.com/evcc-io/evcc/util"
 
 type logger struct {
 	log *util.Logger

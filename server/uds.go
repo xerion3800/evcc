@@ -7,8 +7,8 @@ import (
 	"net/http"
 	"os"
 
-	"github.com/xerion3800/evcc/cmd/shutdown"
-	"github.com/xerion3800/evcc/core/site"
+	"github.com/evcc-io/evcc/cmd/shutdown"
+	"github.com/evcc-io/evcc/core/site"
 )
 
 // SocketPath is the unix domain socket path

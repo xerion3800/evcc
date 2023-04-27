@@ -3,10 +3,10 @@ package service
 import (
 	"net/url"
 
-	"github.com/xerion3800/evcc/util"
-	"github.com/xerion3800/evcc/vehicle/vag"
-	"github.com/xerion3800/evcc/vehicle/vag/mbb"
-	"github.com/xerion3800/evcc/vehicle/vag/vwidentity"
+	"github.com/evcc-io/evcc/util"
+	"github.com/evcc-io/evcc/vehicle/vag"
+	"github.com/evcc-io/evcc/vehicle/vag/mbb"
+	"github.com/evcc-io/evcc/vehicle/vag/vwidentity"
 )
 
 // MbbTokenSource creates a refreshing token source for use with the MBB api.

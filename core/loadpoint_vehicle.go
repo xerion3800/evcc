@@ -6,10 +6,10 @@ import (
 	"strings"
 	"time"
 
-	"github.com/xerion3800/evcc/api"
-	"github.com/xerion3800/evcc/core/db"
-	"github.com/xerion3800/evcc/core/soc"
-	"github.com/xerion3800/evcc/provider"
+	"github.com/evcc-io/evcc/api"
+	"github.com/evcc-io/evcc/core/db"
+	"github.com/evcc-io/evcc/core/soc"
+	"github.com/evcc-io/evcc/provider"
 	"golang.org/x/exp/slices"
 )
 

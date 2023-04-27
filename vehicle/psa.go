@@ -4,9 +4,9 @@ import (
 	"fmt"
 	"time"
 
-	"github.com/xerion3800/evcc/api"
-	"github.com/xerion3800/evcc/util"
-	"github.com/xerion3800/evcc/vehicle/psa"
+	"github.com/evcc-io/evcc/api"
+	"github.com/evcc-io/evcc/util"
+	"github.com/evcc-io/evcc/vehicle/psa"
 )
 
 // https://github.com/TA2k/ioBroker.psa

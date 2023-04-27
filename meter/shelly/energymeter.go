@@ -1,6 +1,6 @@
 package shelly
 
-import "github.com/xerion3800/evcc/api"
+import "github.com/evcc-io/evcc/api"
 
 type EnergyMeter struct {
 	*Connection

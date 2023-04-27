@@ -6,8 +6,8 @@ import (
 
 	"github.com/BurntSushi/toml"
 	"github.com/cloudfoundry/jibber_jabber"
-	"github.com/xerion3800/evcc/server/assets"
-	"github.com/xerion3800/evcc/util/locale/internal"
+	"github.com/evcc-io/evcc/server/assets"
+	"github.com/evcc-io/evcc/util/locale/internal"
 	"github.com/nicksnyder/go-i18n/v2/i18n"
 	"golang.org/x/text/language"
 )

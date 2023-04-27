@@ -11,11 +11,11 @@ import (
 	"time"
 
 	"github.com/coreos/go-oidc/v3/oidc"
-	"github.com/xerion3800/evcc/util"
-	"github.com/xerion3800/evcc/util/request"
-	"github.com/xerion3800/evcc/util/urlvalues"
-	"github.com/xerion3800/evcc/vehicle/vag"
-	"github.com/xerion3800/evcc/vehicle/vag/cariad"
+	"github.com/evcc-io/evcc/util"
+	"github.com/evcc-io/evcc/util/request"
+	"github.com/evcc-io/evcc/util/urlvalues"
+	"github.com/evcc-io/evcc/vehicle/vag"
+	"github.com/evcc-io/evcc/vehicle/vag/cariad"
 )
 
 const WellKnown = cariad.BaseURL + "/login/v1/idk/openid-configuration"

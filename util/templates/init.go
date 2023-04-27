@@ -9,7 +9,7 @@ import (
 	"sync"
 	"text/template"
 
-	"github.com/xerion3800/evcc/templates/definition"
+	"github.com/evcc-io/evcc/templates/definition"
 	"golang.org/x/exp/slices"
 	"gopkg.in/yaml.v3"
 )

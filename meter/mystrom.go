@@ -1,9 +1,9 @@
 package meter
 
 import (
-	"github.com/xerion3800/evcc/api"
-	"github.com/xerion3800/evcc/meter/mystrom"
-	"github.com/xerion3800/evcc/util"
+	"github.com/evcc-io/evcc/api"
+	"github.com/evcc-io/evcc/meter/mystrom"
+	"github.com/evcc-io/evcc/util"
 )
 
 // myStrom switch:

@@ -1,9 +1,9 @@
 # evcc 🚘☀️
 
-[![Build Status](https://github.com/xerion3800/evcc/workflows/Build/badge.svg)](https://github.com/xerion3800/evcc/actions?query=workflow%3ABuild)
-[![Code Quality](https://goreportcard.com/badge/github.com/xerion3800/evcc)](https://goreportcard.com/report/github.com/xerion3800/evcc)
+[![Build Status](https://github.com/evcc-io/evcc/workflows/Build/badge.svg)](https://github.com/evcc-io/evcc/actions?query=workflow%3ABuild)
+[![Code Quality](https://goreportcard.com/badge/github.com/evcc-io/evcc)](https://goreportcard.com/report/github.com/evcc-io/evcc)
 [![Translation](https://hosted.weblate.org/widgets/evcc/-/evcc/svg-badge.svg)](https://hosted.weblate.org/engage/evcc/)
-[![Open in Visual Studio Code](https://img.shields.io/static/v1?logo=visualstudiocode&label=&message=Open%20in%20VS%20Code&labelColor=2c2c32&color=007acc&logoColor=007acc)](https://open.vscode.dev/xerion3800/evcc)
+[![Open in Visual Studio Code](https://img.shields.io/static/v1?logo=visualstudiocode&label=&message=Open%20in%20VS%20Code&labelColor=2c2c32&color=007acc&logoColor=007acc)](https://open.vscode.dev/evcc-io/evcc)
 [![OSS hosting by cloudsmith](https://img.shields.io/badge/OSS%20hosting%20by-cloudsmith-blue?logo=cloudsmith)](https://cloudsmith.io/~evcc/packages/)
 [![Latest Version](https://img.shields.io/github/release/evcc-io/evcc.svg)](https://github.com/evcc-io/evcc/releases)
 
@@ -35,7 +35,7 @@ evcc is an extensible EV Charge Controller with PV integration implemented in [G
 - logging using [InfluxDB](https://www.influxdata.com) and [Grafana](https://grafana.com/grafana/)
 - granular charge power control down to mA steps with supported chargers (labeled by e.g. smartWB as [OLC](https://board.evse-wifi.de/viewtopic.php?f=16&t=187))
 - REST and MQTT [APIs](https://docs.evcc.io/docs/reference/api) for integration with home automation systems
-- Add-ons for [HomeAssistant](https://github.com/xerion3800/evcc-hassio-addon) and [OpenHAB](https://www.openhab.org/addons/bindings/evcc) (not maintained by the evcc core team)
+- Add-ons for [HomeAssistant](https://github.com/evcc-io/evcc-hassio-addon) and [OpenHAB](https://www.openhab.org/addons/bindings/evcc) (not maintained by the evcc core team)
 
 ## Getting Started
 
@@ -98,7 +98,7 @@ Maintaining evcc consumes time and effort. With the vast amount of different dev
 
 While evcc is open source, we would also like to encourage vendors to provide open source hardware devices, public documentation and support open source projects like ours that provide additional value to otherwise closed hardware. Where this is not the case, evcc requires "sponsor token" to finance ongoing development and support of evcc.
 
-The personal sponsor token requires a [Github Sponsorship](https://github.com/sponsors/xerion3800) and can be requested at [sponsor.evcc.io](https://sponsor.evcc.io/).
+The personal sponsor token requires a [Github Sponsorship](https://github.com/sponsors/evcc-io) and can be requested at [sponsor.evcc.io](https://sponsor.evcc.io/).
 
 [1]: https://golang.org
 [2]: https://nodejs.org/

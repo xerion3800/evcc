@@ -1,8 +1,8 @@
 package meter
 
 import (
-	"github.com/xerion3800/evcc/api"
-	"github.com/xerion3800/evcc/util/templates"
+	"github.com/evcc-io/evcc/api"
+	"github.com/evcc-io/evcc/util/templates"
 )
 
 func init() {

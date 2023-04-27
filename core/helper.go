@@ -2,8 +2,8 @@ package core
 
 import (
 	"github.com/avast/retry-go/v3"
-	"github.com/xerion3800/evcc/api"
-	"github.com/xerion3800/evcc/util"
+	"github.com/evcc-io/evcc/api"
+	"github.com/evcc-io/evcc/util"
 	"github.com/samber/lo"
 )
 
@@ -31,7 +31,7 @@ func powerToCurrent(power float64, phases int) float64 {
 func sitePower(log *util.Logger, maxGrid, grid, battery, residual float64) float64 {
 	// For hybrid inverters, battery can be charged from DC power in excess of
 	// inverter AC rating. This battery charge must not be counted as available for AC consumption.
-	// https://github.com/xerion3800/evcc/issues/2734, https://github.com/xerion3800/evcc/issues/2986
+	// https://github.com/evcc-io/evcc/issues/2734, https://github.com/evcc-io/evcc/issues/2986
 	if maxGrid > 0 && grid > maxGrid && battery < 0 {
 		log.TRACE.Printf("ignoring excess DC charging due to grid consumption: %.0fW > %.0fW", grid, maxGrid)
 		battery = 0

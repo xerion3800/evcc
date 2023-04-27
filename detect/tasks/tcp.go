@@ -6,7 +6,7 @@ import (
 	"strconv"
 	"time"
 
-	"github.com/xerion3800/evcc/util"
+	"github.com/evcc-io/evcc/util"
 )
 
 const Tcp TaskType = "tcp"

@@ -11,7 +11,7 @@
 				<div v-for="(error, index) in errors" :key="index">{{ error }}</div>
 			</code>
 			<i18n-t tag="p" keypath="startupError.description">
-				<a href="https://github.com/xerion3800/evcc/discussions">
+				<a href="https://github.com/evcc-io/evcc/discussions">
 					{{ $t("startupError.discussions") }}
 				</a>
 			</i18n-t>

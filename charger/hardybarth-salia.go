@@ -25,15 +25,15 @@ import (
 	"strings"
 	"time"
 
-	"github.com/xerion3800/evcc/api"
-	"github.com/xerion3800/evcc/charger/echarge"
-	"github.com/xerion3800/evcc/charger/echarge/salia"
-	"github.com/xerion3800/evcc/util"
-	"github.com/xerion3800/evcc/util/request"
-	"github.com/xerion3800/evcc/util/sponsor"
+	"github.com/evcc-io/evcc/api"
+	"github.com/evcc-io/evcc/charger/echarge"
+	"github.com/evcc-io/evcc/charger/echarge/salia"
+	"github.com/evcc-io/evcc/util"
+	"github.com/evcc-io/evcc/util/request"
+	"github.com/evcc-io/evcc/util/sponsor"
 )
 
-// https://github.com/xerion3800/evcc/discussions/778
+// https://github.com/evcc-io/evcc/discussions/778
 
 // Salia charger implementation
 type Salia struct {

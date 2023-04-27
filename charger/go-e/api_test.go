@@ -6,7 +6,7 @@ import (
 	"net/http/httptest"
 	"testing"
 
-	"github.com/xerion3800/evcc/util"
+	"github.com/evcc-io/evcc/util"
 )
 
 type handler struct {

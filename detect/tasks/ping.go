@@ -4,7 +4,7 @@ import (
 	"runtime"
 	"time"
 
-	"github.com/xerion3800/evcc/util"
+	"github.com/evcc-io/evcc/util"
 	ping "github.com/prometheus-community/pro-bing"
 )
 

@@ -5,10 +5,10 @@ import (
 	"net/url"
 	"strings"
 
-	"github.com/xerion3800/evcc/util"
-	"github.com/xerion3800/evcc/util/request"
-	"github.com/xerion3800/evcc/util/urlvalues"
-	"github.com/xerion3800/evcc/vehicle/vag"
+	"github.com/evcc-io/evcc/util"
+	"github.com/evcc-io/evcc/util/request"
+	"github.com/evcc-io/evcc/util/urlvalues"
+	"github.com/evcc-io/evcc/vehicle/vag"
 )
 
 const (

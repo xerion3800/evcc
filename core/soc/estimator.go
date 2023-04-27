@@ -5,8 +5,8 @@ import (
 	"math"
 	"time"
 
-	"github.com/xerion3800/evcc/api"
-	"github.com/xerion3800/evcc/util"
+	"github.com/evcc-io/evcc/api"
+	"github.com/evcc-io/evcc/util"
 )
 
 const ChargeEfficiency = 0.9 // assume charge 90% efficiency

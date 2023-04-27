@@ -21,10 +21,10 @@ import (
 	"encoding/binary"
 	"fmt"
 
-	"github.com/xerion3800/evcc/api"
-	"github.com/xerion3800/evcc/util"
-	"github.com/xerion3800/evcc/util/modbus"
-	"github.com/xerion3800/evcc/util/sponsor"
+	"github.com/evcc-io/evcc/api"
+	"github.com/evcc-io/evcc/util"
+	"github.com/evcc-io/evcc/util/modbus"
+	"github.com/evcc-io/evcc/util/sponsor"
 )
 
 // https://shop.alphatec-systeme.de/media/pdf/4d/0e/64/MontageanleitungwlFxbRgs4NKK3.pdf

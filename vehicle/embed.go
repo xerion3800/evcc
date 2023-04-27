@@ -1,7 +1,7 @@
 package vehicle
 
 import (
-	"github.com/xerion3800/evcc/api"
+	"github.com/evcc-io/evcc/api"
 )
 
 type embed struct {

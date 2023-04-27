@@ -3,7 +3,7 @@ package porsche
 import (
 	"errors"
 
-	"github.com/xerion3800/evcc/api"
+	"github.com/evcc-io/evcc/api"
 )
 
 type Vehicle struct {

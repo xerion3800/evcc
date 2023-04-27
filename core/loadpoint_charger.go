@@ -1,7 +1,7 @@
 package core
 
 import (
-	"github.com/xerion3800/evcc/api"
+	"github.com/evcc-io/evcc/api"
 	"golang.org/x/exp/slices"
 )
 

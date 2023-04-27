@@ -3,7 +3,7 @@ package jlr
 import (
 	"strconv"
 
-	"github.com/xerion3800/evcc/api"
+	"github.com/evcc-io/evcc/api"
 	"golang.org/x/oauth2"
 )
 

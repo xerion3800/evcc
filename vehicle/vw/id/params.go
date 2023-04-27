@@ -3,7 +3,7 @@ package id
 import (
 	"net/url"
 
-	"github.com/xerion3800/evcc/vehicle/vag/cariad"
+	"github.com/evcc-io/evcc/vehicle/vag/cariad"
 )
 
 const LoginURL = cariad.BaseURL + "/user-login/v1/authorize"

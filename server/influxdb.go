@@ -9,8 +9,8 @@ import (
 	"time"
 
 	"github.com/benbjohnson/clock"
-	"github.com/xerion3800/evcc/core/site"
-	"github.com/xerion3800/evcc/util"
+	"github.com/evcc-io/evcc/core/site"
+	"github.com/evcc-io/evcc/util"
 	influxdb2 "github.com/influxdata/influxdb-client-go/v2"
 	"github.com/influxdata/influxdb-client-go/v2/api/write"
 	influxlog "github.com/influxdata/influxdb-client-go/v2/log"

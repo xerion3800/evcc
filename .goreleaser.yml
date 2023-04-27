@@ -1,7 +1,7 @@
 dist: release
 release:
   github:
-    owner: xerion3800
+    owner: evcc-io
     name: evcc
 
 builds:
@@ -10,7 +10,7 @@ builds:
     flags:
       - -tags=release
     ldflags:
-      - -X github.com/xerion3800/evcc/server.Version={{ .Version }} -s -w
+      - -X github.com/evcc-io/evcc/server.Version={{ .Version }} -s -w
     goos:
       - linux
       - darwin
@@ -86,7 +86,7 @@ nfpms:
 
 brews:
   - tap:
-      owner: xerion3800
+      owner: evcc-io
       name: homebrew-tap
     commit_author:
       name: andig

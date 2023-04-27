@@ -4,8 +4,8 @@ import (
 	"time"
 
 	"github.com/benbjohnson/clock"
-	"github.com/xerion3800/evcc/server/db/settings"
-	"github.com/xerion3800/evcc/tariff"
+	"github.com/evcc-io/evcc/server/db/settings"
+	"github.com/evcc-io/evcc/tariff"
 )
 
 const (

@@ -1,4 +1,4 @@
-module github.com/xerion3800/evcc
+module github.com/evcc-io/evcc
 
 go 1.20
 

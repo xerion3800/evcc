@@ -17,7 +17,7 @@ interval: 10s # control cycle interval
 sponsortoken: {{ .SponsorToken }}
 
 # sponsors can set telemetry: true to enable anonymous data aggregation
-# see https://github.com/xerion3800/evcc/discussions/4554
+# see https://github.com/evcc-io/evcc/discussions/4554
 telemetry: {{ .Telemetry }}
 {{- end}}
 {{- if .Meters }}

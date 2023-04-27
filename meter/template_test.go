@@ -3,8 +3,8 @@ package meter
 import (
 	"testing"
 
-	"github.com/xerion3800/evcc/util/templates"
-	"github.com/xerion3800/evcc/util/test"
+	"github.com/evcc-io/evcc/util/templates"
+	"github.com/evcc-io/evcc/util/test"
 )
 
 var acceptable = []string{

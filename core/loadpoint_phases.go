@@ -3,7 +3,7 @@ package core
 import (
 	"math"
 
-	"github.com/xerion3800/evcc/api"
+	"github.com/evcc-io/evcc/api"
 )
 
 // setConfiguredPhases sets the default phase configuration

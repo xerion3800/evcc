@@ -3,8 +3,8 @@ package mercedes
 import (
 	"fmt"
 
-	"github.com/xerion3800/evcc/util"
-	"github.com/xerion3800/evcc/util/request"
+	"github.com/evcc-io/evcc/util"
+	"github.com/evcc-io/evcc/util/request"
 	"golang.org/x/oauth2"
 )
 

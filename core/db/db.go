@@ -1,8 +1,8 @@
 package db
 
 import (
-	serverdb "github.com/xerion3800/evcc/server/db"
-	"github.com/xerion3800/evcc/util"
+	serverdb "github.com/evcc-io/evcc/server/db"
+	"github.com/evcc-io/evcc/util"
 	"gorm.io/gorm"
 )
 

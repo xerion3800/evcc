@@ -5,11 +5,11 @@ import (
 	"time"
 
 	"github.com/benbjohnson/clock"
-	"github.com/xerion3800/evcc/api"
-	coredb "github.com/xerion3800/evcc/core/db"
-	"github.com/xerion3800/evcc/mock"
-	serverdb "github.com/xerion3800/evcc/server/db"
-	"github.com/xerion3800/evcc/util"
+	"github.com/evcc-io/evcc/api"
+	coredb "github.com/evcc-io/evcc/core/db"
+	"github.com/evcc-io/evcc/mock"
+	serverdb "github.com/evcc-io/evcc/server/db"
+	"github.com/evcc-io/evcc/util"
 	"github.com/golang/mock/gomock"
 	"github.com/stretchr/testify/assert"
 )

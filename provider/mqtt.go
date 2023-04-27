@@ -3,9 +3,9 @@ package provider
 import (
 	"time"
 
-	"github.com/xerion3800/evcc/provider/mqtt"
-	"github.com/xerion3800/evcc/provider/pipeline"
-	"github.com/xerion3800/evcc/util"
+	"github.com/evcc-io/evcc/provider/mqtt"
+	"github.com/evcc-io/evcc/provider/pipeline"
+	"github.com/evcc-io/evcc/util"
 )
 
 // Mqtt provider

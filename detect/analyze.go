@@ -1,6 +1,6 @@
 package detect
 
-import "github.com/xerion3800/evcc/detect/tasks"
+import "github.com/evcc-io/evcc/detect/tasks"
 
 type Criteria map[string]interface{}
 

@@ -3,8 +3,8 @@ package ford
 import (
 	"time"
 
-	"github.com/xerion3800/evcc/api"
-	"github.com/xerion3800/evcc/provider"
+	"github.com/evcc-io/evcc/api"
+	"github.com/evcc-io/evcc/provider"
 )
 
 const refreshTimeout = time.Minute

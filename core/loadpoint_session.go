@@ -1,8 +1,8 @@
 package core
 
 import (
-	"github.com/xerion3800/evcc/api"
-	"github.com/xerion3800/evcc/core/db"
+	"github.com/evcc-io/evcc/api"
+	"github.com/evcc-io/evcc/core/db"
 )
 
 func (lp *Loadpoint) chargeMeterTotal() float64 {

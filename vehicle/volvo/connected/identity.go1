@@ -10,10 +10,10 @@ import (
 	"strings"
 
 	"github.com/coreos/go-oidc/v3/oidc"
-	"github.com/xerion3800/evcc/provider"
-	"github.com/xerion3800/evcc/server/auth"
-	"github.com/xerion3800/evcc/util"
-	"github.com/xerion3800/evcc/util/request"
+	"github.com/evcc-io/evcc/provider"
+	"github.com/evcc-io/evcc/server/auth"
+	"github.com/evcc-io/evcc/util"
+	"github.com/evcc-io/evcc/util/request"
 	"golang.org/x/oauth2"
 )
 

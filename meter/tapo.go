@@ -1,9 +1,9 @@
 package meter
 
 import (
-	"github.com/xerion3800/evcc/api"
-	"github.com/xerion3800/evcc/meter/tapo"
-	"github.com/xerion3800/evcc/util"
+	"github.com/evcc-io/evcc/api"
+	"github.com/evcc-io/evcc/meter/tapo"
+	"github.com/evcc-io/evcc/util"
 )
 
 // TP-Link Tapo meter implementation

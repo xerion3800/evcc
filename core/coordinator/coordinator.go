@@ -1,9 +1,9 @@
 package coordinator
 
 import (
-	"github.com/xerion3800/evcc/api"
-	"github.com/xerion3800/evcc/core/loadpoint"
-	"github.com/xerion3800/evcc/util"
+	"github.com/evcc-io/evcc/api"
+	"github.com/evcc-io/evcc/core/loadpoint"
+	"github.com/evcc-io/evcc/util"
 )
 
 // Coordinator coordinates vehicle access between loadpoints

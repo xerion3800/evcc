@@ -4,10 +4,10 @@ import (
 	"strconv"
 	"time"
 
-	"github.com/xerion3800/evcc/api"
-	"github.com/xerion3800/evcc/util"
-	"github.com/xerion3800/evcc/util/request"
-	"github.com/xerion3800/evcc/vehicle/aiways"
+	"github.com/evcc-io/evcc/api"
+	"github.com/evcc-io/evcc/util"
+	"github.com/evcc-io/evcc/util/request"
+	"github.com/evcc-io/evcc/vehicle/aiways"
 )
 
 // https://github.com/davidgiga1993/AiwaysAPI

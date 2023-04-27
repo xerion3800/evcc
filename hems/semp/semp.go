@@ -12,12 +12,12 @@ import (
 	"strings"
 	"time"
 
-	"github.com/xerion3800/evcc/api"
-	"github.com/xerion3800/evcc/core/loadpoint"
-	"github.com/xerion3800/evcc/core/site"
-	"github.com/xerion3800/evcc/server"
-	"github.com/xerion3800/evcc/util"
-	"github.com/xerion3800/evcc/util/machine"
+	"github.com/evcc-io/evcc/api"
+	"github.com/evcc-io/evcc/core/loadpoint"
+	"github.com/evcc-io/evcc/core/site"
+	"github.com/evcc-io/evcc/server"
+	"github.com/evcc-io/evcc/util"
+	"github.com/evcc-io/evcc/util/machine"
 	"github.com/google/uuid"
 	"github.com/gorilla/mux"
 	"github.com/koron/go-ssdp"
@@ -235,7 +235,7 @@ func (s *SEMP) gatewayDescription(w http.ResponseWriter, r *http.Request) {
 		Device: Device{
 			DeviceType:      sempGateway,
 			FriendlyName:    "evcc",
-			Manufacturer:    "github.com/xerion3800/evcc",
+			Manufacturer:    "github.com/evcc-io/evcc",
 			ModelName:       serverName,
 			PresentationURL: s.hostURI,
 			UDN:             uid,
@@ -380,7 +380,7 @@ func (s *SEMP) deviceInfo(id int, lp loadpoint.API) DeviceInfo {
 			DeviceName:   lp.Title(),
 			DeviceType:   sempCharger,
 			DeviceSerial: s.serialNumber(id),
-			DeviceVendor: "github.com/xerion3800/evcc",
+			DeviceVendor: "github.com/evcc-io/evcc",
 		},
 		Capabilities: Capabilities{
 			CurrentPowerMethod:   method,

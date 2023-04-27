@@ -9,8 +9,8 @@ import (
 	"time"
 
 	paho "github.com/eclipse/paho.mqtt.golang"
-	"github.com/xerion3800/evcc/api"
-	"github.com/xerion3800/evcc/util"
+	"github.com/evcc-io/evcc/api"
+	"github.com/evcc-io/evcc/util"
 )
 
 const (
@@ -146,7 +146,7 @@ func (m *Client) ListenSetter(topic string, callback func(string)) {
 	m.Listen(topic, func(payload string) {
 		callback(payload)
 		if err := m.Publish(topic, true, ""); err != nil {
-			m.log.ERROR.Printf("clear %s: %v", topic, err)
+			m.log.ERROR.Printf("clear: %s: %v", topic, err)
 		}
 	})
 }

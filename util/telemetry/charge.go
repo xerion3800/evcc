@@ -8,11 +8,11 @@ import (
 	"sync"
 	"time"
 
-	"github.com/xerion3800/evcc/server/db/settings"
-	"github.com/xerion3800/evcc/util"
-	"github.com/xerion3800/evcc/util/machine"
-	"github.com/xerion3800/evcc/util/request"
-	"github.com/xerion3800/evcc/util/sponsor"
+	"github.com/evcc-io/evcc/server/db/settings"
+	"github.com/evcc-io/evcc/util"
+	"github.com/evcc-io/evcc/util/machine"
+	"github.com/evcc-io/evcc/util/request"
+	"github.com/evcc-io/evcc/util/sponsor"
 )
 
 const (

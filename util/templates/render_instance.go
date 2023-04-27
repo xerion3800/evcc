@@ -3,7 +3,7 @@ package templates
 import (
 	"errors"
 
-	"github.com/xerion3800/evcc/util"
+	"github.com/evcc-io/evcc/util"
 	"gopkg.in/yaml.v3"
 )
 

@@ -3,7 +3,7 @@ package prioritizer
 import (
 	"testing"
 
-	"github.com/xerion3800/evcc/core/loadpoint"
+	"github.com/evcc-io/evcc/core/loadpoint"
 	"github.com/golang/mock/gomock"
 	"github.com/stretchr/testify/assert"
 )

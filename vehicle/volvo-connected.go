@@ -3,9 +3,9 @@ package vehicle
 import (
 	"time"
 
-	"github.com/xerion3800/evcc/api"
-	"github.com/xerion3800/evcc/util"
-	"github.com/xerion3800/evcc/vehicle/volvo/connected"
+	"github.com/evcc-io/evcc/api"
+	"github.com/evcc-io/evcc/util"
+	"github.com/evcc-io/evcc/vehicle/volvo/connected"
 )
 
 // VolvoConnected is an api.Vehicle implementation for Volvo Connected Car vehicles

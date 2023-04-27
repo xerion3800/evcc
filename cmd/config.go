@@ -13,17 +13,17 @@ import (
 	"time"
 
 	"github.com/dustin/go-humanize"
-	"github.com/xerion3800/evcc/api"
-	"github.com/xerion3800/evcc/charger"
-	"github.com/xerion3800/evcc/meter"
-	"github.com/xerion3800/evcc/provider/mqtt"
-	"github.com/xerion3800/evcc/push"
-	"github.com/xerion3800/evcc/server"
-	"github.com/xerion3800/evcc/server/oauth2redirect"
-	"github.com/xerion3800/evcc/util"
-	"github.com/xerion3800/evcc/util/modbus"
-	"github.com/xerion3800/evcc/vehicle"
-	"github.com/xerion3800/evcc/vehicle/wrapper"
+	"github.com/evcc-io/evcc/api"
+	"github.com/evcc-io/evcc/charger"
+	"github.com/evcc-io/evcc/meter"
+	"github.com/evcc-io/evcc/provider/mqtt"
+	"github.com/evcc-io/evcc/push"
+	"github.com/evcc-io/evcc/server"
+	"github.com/evcc-io/evcc/server/oauth2redirect"
+	"github.com/evcc-io/evcc/util"
+	"github.com/evcc-io/evcc/util/modbus"
+	"github.com/evcc-io/evcc/vehicle"
+	"github.com/evcc-io/evcc/vehicle/wrapper"
 	"github.com/gorilla/handlers"
 	"github.com/gorilla/mux"
 	"golang.org/x/exp/maps"
@@ -156,7 +156,7 @@ func (cp *ConfigProvider) TrackVisitors() {
 // Meter provides meters by name
 func (cp *ConfigProvider) Meter(name string) (api.Meter, error) {
 	if meter, ok := cp.meters[name]; ok {
-		// track duplicate usage https://github.com/xerion3800/evcc/issues/1744
+		// track duplicate usage https://github.com/evcc-io/evcc/issues/1744
 		if cp.visited != nil {
 			if _, ok := cp.visited[name]; ok {
 				log.FATAL.Fatalf("duplicate meter usage: %s", name)

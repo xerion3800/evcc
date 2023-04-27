@@ -7,8 +7,8 @@ params:
   - name: vccapikey
     required: true
     help:
-      en: "Volvo developer portal VCC API Key, see https://github.com/xerion3800/evcc/discussions/3677#discussioncomment-4106300"
-      de: "Volvo developer portal VCC API Key, siehe https://github.com/xerion3800/evcc/discussions/3677#discussioncomment-4106300"
+      en: "Volvo developer portal VCC API Key, see https://github.com/evcc-io/evcc/discussions/3677#discussioncomment-4106300"
+      de: "Volvo developer portal VCC API Key, siehe https://github.com/evcc-io/evcc/discussions/3677#discussioncomment-4106300"
 render: |
   type: volvo-connected
   vccapikey: {{ .vccapikey }}

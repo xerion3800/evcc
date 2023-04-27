@@ -102,7 +102,7 @@ func generate(out io.Writer, packageName, functionName, baseType string, dynamic
 		Types               map[string]typeStruct
 		Combinations        [][]string
 	}{
-		API:          "github.com/xerion3800/evcc/api",
+		API:          "github.com/evcc-io/evcc/api",
 		Package:      packageName,
 		Function:     functionName,
 		BaseType:     baseType,

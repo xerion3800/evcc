@@ -9,16 +9,16 @@ import (
 	"sync"
 	"time"
 
-	"github.com/xerion3800/evcc/api"
-	"github.com/xerion3800/evcc/core/coordinator"
-	"github.com/xerion3800/evcc/core/db"
-	"github.com/xerion3800/evcc/core/loadpoint"
-	"github.com/xerion3800/evcc/core/planner"
-	"github.com/xerion3800/evcc/core/soc"
-	"github.com/xerion3800/evcc/core/wrapper"
-	"github.com/xerion3800/evcc/provider"
-	"github.com/xerion3800/evcc/push"
-	"github.com/xerion3800/evcc/util"
+	"github.com/evcc-io/evcc/api"
+	"github.com/evcc-io/evcc/core/coordinator"
+	"github.com/evcc-io/evcc/core/db"
+	"github.com/evcc-io/evcc/core/loadpoint"
+	"github.com/evcc-io/evcc/core/planner"
+	"github.com/evcc-io/evcc/core/soc"
+	"github.com/evcc-io/evcc/core/wrapper"
+	"github.com/evcc-io/evcc/provider"
+	"github.com/evcc-io/evcc/push"
+	"github.com/evcc-io/evcc/util"
 
 	evbus "github.com/asaskevich/EventBus"
 	"github.com/avast/retry-go/v3"
@@ -344,7 +344,7 @@ func (lp *Loadpoint) configureChargerType(charger api.Charger) {
 
 	// ensure charge rater exists
 	// measurement are obtained from separate charge meter if defined
-	// (https://github.com/xerion3800/evcc/issues/2469)
+	// (https://github.com/evcc-io/evcc/issues/2469)
 	if rt, ok := charger.(api.ChargeRater); ok && integrated {
 		lp.chargeRater = rt
 
@@ -419,7 +419,7 @@ func (lp *Loadpoint) evChargeStopHandler() {
 	lp.socUpdated = time.Time{}
 
 	// reset pv enable/disable timer
-	// https://github.com/xerion3800/evcc/issues/2289
+	// https://github.com/evcc-io/evcc/issues/2289
 	if !lp.pvTimer.Equal(elapsed) {
 		lp.resetPVTimer()
 	}
@@ -677,7 +677,7 @@ func (lp *Loadpoint) setLimit(chargeCurrent float64, force bool) error {
 		lp.elapseGuard()
 
 		// remote stop
-		// TODO https://github.com/xerion3800/evcc/discussions/1929
+		// TODO https://github.com/evcc-io/evcc/discussions/1929
 		// if car, ok := lp.vehicle.(api.VehicleChargeController); !enabled && ok {
 		// 	// log but don't propagate
 		// 	if err := car.StopCharge(); err != nil {
@@ -703,7 +703,7 @@ func (lp *Loadpoint) setLimit(chargeCurrent float64, force bool) error {
 		}
 
 		// remote start
-		// TODO https://github.com/xerion3800/evcc/discussions/1929
+		// TODO https://github.com/evcc-io/evcc/discussions/1929
 		// if car, ok := lp.vehicle.(api.VehicleChargeController); enabled && ok {
 		// 	// log but don't propagate
 		// 	if err := car.StartCharge(); err != nil {
@@ -967,9 +967,9 @@ func (lp *Loadpoint) pvScalePhases(availablePower, minCurrent, maxCurrent float6
 	phases := lp.GetPhases()
 
 	// observed phase state inconsistency
-	// - https://github.com/xerion3800/evcc/issues/1572
-	// - https://github.com/xerion3800/evcc/issues/2230
-	// - https://github.com/xerion3800/evcc/issues/2613
+	// - https://github.com/evcc-io/evcc/issues/1572
+	// - https://github.com/evcc-io/evcc/issues/2230
+	// - https://github.com/evcc-io/evcc/issues/2613
 	measuredPhases := lp.getMeasuredPhases()
 	if phases > 0 && phases < measuredPhases {
 		if lp.guardGracePeriodElapsed() {
@@ -1182,8 +1182,8 @@ func (lp *Loadpoint) UpdateChargePower() {
 		lp.log.DEBUG.Printf("charge power: %.0fW", value)
 		lp.publish("chargePower", value)
 
-		// https://github.com/xerion3800/evcc/issues/2153
-		// https://github.com/xerion3800/evcc/issues/6986
+		// https://github.com/evcc-io/evcc/issues/2153
+		// https://github.com/evcc-io/evcc/issues/6986
 		if lp.chargePower < -20 {
 			lp.log.WARN.Printf("charge power must not be negative: %.0f", lp.chargePower)
 		}
@@ -1277,7 +1277,7 @@ func (lp *Loadpoint) updateChargeVoltages() {
 func (lp *Loadpoint) publishChargeProgress() {
 	if f, err := lp.chargeRater.ChargedEnergy(); err == nil {
 		// workaround for Go-E resetting during disconnect, see
-		// https://github.com/xerion3800/evcc/issues/5092
+		// https://github.com/evcc-io/evcc/issues/5092
 		if f > lp.chargedAtStartup {
 			lp.setChargedEnergy(1e3 * (f - lp.chargedAtStartup)) // convert to Wh
 		}
@@ -1477,7 +1477,7 @@ func (lp *Loadpoint) Update(sitePower float64, autoCharge, batteryBuffered bool)
 	switch {
 	case !lp.connected():
 		// always disable charger if not connected
-		// https://github.com/xerion3800/evcc/issues/105
+		// https://github.com/evcc-io/evcc/issues/105
 		err = lp.setLimit(0, false)
 
 	case lp.scalePhasesRequired():
