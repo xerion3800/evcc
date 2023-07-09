@@ -1,3 +1,13 @@
+[batterySettings]
+batteryLevel = "Batteri niveau"
+capacity = "{energy} af {total}"
+legendBottomName = "Prioritér hjemmet"
+legendBottomSubline = "Anvendes ikke til opladning"
+legendMiddleName = "Bil først"
+legendMiddleSubline = "Hjem efterfølgende"
+legendTitle = "Hvordan skal solenergi benyttes?"
+legendTopAutostart = "starter automatisk"
+
 [footer]
 
 [footer.community]
@@ -168,7 +178,7 @@ update = "Opdatering"
 
 [main.targetChargePlan]
 chargeDuration = "Opladningstid"
-co2Label = "CO₂ udledning Ø"
+co2Label = "CO₂ udledning ⌀"
 priceLabel = "Energi pris"
 timeRange = "{day} {range} t"
 unknownPrice = "stadig ukendt"

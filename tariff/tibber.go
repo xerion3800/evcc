@@ -18,7 +18,6 @@ type Tibber struct {
 	mux     sync.Mutex
 	log     *util.Logger
 	homeID  string
-	unit    string
 	client  *tibber.Client
 	data    api.Rates
 	updated time.Time
@@ -35,7 +34,6 @@ func NewTibberFromConfig(other map[string]interface{}) (api.Tariff, error) {
 		Token  string
 		HomeID string
 		Unit   string
-		Cheap  any // TODO deprecated
 	}
 
 	if err := util.DecodeOther(other, &cc); err != nil {
@@ -51,27 +49,16 @@ func NewTibberFromConfig(other map[string]interface{}) (api.Tariff, error) {
 	t := &Tibber{
 		log:    log,
 		homeID: cc.HomeID,
-		unit:   cc.Unit,
 		client: tibber.NewClient(log, cc.Token),
 	}
 
-	if t.homeID == "" || t.unit == "" {
+	if t.homeID == "" {
 		home, err := t.client.DefaultHome(t.homeID)
 		if err != nil {
 			return nil, err
 		}
 
-		if t.homeID == "" {
-			t.homeID = home.ID
-		}
-		if t.unit == "" {
-			t.unit = home.CurrentSubscription.PriceInfo.Current.Currency
-		}
-	}
-
-	// TODO deprecated
-	if cc.Cheap != nil {
-		t.log.WARN.Println("cheap rate configuration has been replaced by target charging and is deprecated")
+		t.homeID = home.ID
 	}
 
 	done := make(chan error)
@@ -136,11 +123,6 @@ func (t *Tibber) rates(pi []tibber.Price) api.Rates {
 	return data
 }
 
-// Unit implements the api.Tariff interface
-func (t *Tibber) Unit() string {
-	return t.unit
-}
-
 // Rates implements the api.Tariff interface
 func (t *Tibber) Rates() (api.Rates, error) {
 	t.mux.Lock()
@@ -148,7 +130,7 @@ func (t *Tibber) Rates() (api.Rates, error) {
 	return slices.Clone(t.data), outdatedError(t.updated, time.Hour)
 }
 
-// IsDynamic implements the api.Tariff interface
-func (t *Tibber) IsDynamic() bool {
-	return true
+// Type returns the tariff type
+func (t *Tibber) Type() api.TariffType {
+	return api.TariffTypePriceDynamic
 }

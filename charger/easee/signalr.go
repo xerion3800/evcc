@@ -1,6 +1,9 @@
 package easee
 
-import "time"
+import (
+	"strconv"
+	"time"
+)
 
 type Observation struct {
 	Mid       string
@@ -8,6 +11,21 @@ type Observation struct {
 	ID        ObservationID
 	Timestamp time.Time
 	Value     string
+}
+
+func (o *Observation) TypedValue() (interface{}, error) {
+	switch o.DataType {
+	case Boolean:
+		return o.Value == "1", nil
+	case Double:
+		return strconv.ParseFloat(o.Value, 64)
+	case Integer:
+		return strconv.Atoi(o.Value)
+	case String:
+		fallthrough
+	default:
+		return o.Value, nil
+	}
 }
 
 type SignalRCommandResponse struct {
@@ -205,6 +223,8 @@ const (
 	EQ_AVAILABLE_CURRENT_P1                            ObservationID = 230 // Available current for charging on P1 according to Equalizer [Double]
 	EQ_AVAILABLE_CURRENT_P2                            ObservationID = 231 // Available current for charging on P2 according to Equalizer [Double]
 	EQ_AVAILABLE_CURRENT_P3                            ObservationID = 232 // Available current for charging on P3 according to Equalizer [Double]
+	CONNECTED_TO_CLOUD                                 ObservationID = 250 // If charger connected to cloud or not
+	CLOUD_DISCONNECT_REASON                            ObservationID = 251 // Reason why charger disconnected from cloud
 	LISTEN_TO_CONTROL_PULSE                            ObservationID = 56  // True = charger needs control pulse to consider itself online. Readback on charger setting [event] [Boolean]
 	CONTROL_PULSE_RTT                                  ObservationID = 57  // Control pulse round-trip time in milliseconds [Integer]
 )

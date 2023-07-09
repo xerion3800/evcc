@@ -131,49 +131,41 @@ describe("timer", () => {
       { remaining: "1:30m" }
     );
   });
-  test("show guard enable timer if it exists", () => {
+  test("show guard timer if it exists", () => {
     expectStatus(
       {
-        guardAction: "enable",
         connected: true,
+        guardAction: "enable",
         guardRemainingInterpolated: 90,
       },
-      "guardEnable",
+      "guard",
       { remaining: "1:30m" }
     );
   });
-  test("don't show guard enable timer if charging", () => {
+  test("don't show guard timer if another timer exists", () => {
     expectStatus(
       {
+        connected: true,
+        charging: true,
+        pvAction: "disable",
+        pvRemainingInterpolated: 30,
         guardAction: "enable",
-        connected: true,
-        charging: true,
         guardRemainingInterpolated: 90,
       },
-      "charging"
+      "pvDisable",
+      { remaining: "30s" }
     );
   });
-  test("show guard disable timer if it exists", () => {
+  test("show guard timer if charging and no other timer exists", () => {
     expectStatus(
       {
-        guardAction: "disable",
         connected: true,
         charging: true,
+        guardAction: "enable",
         guardRemainingInterpolated: 90,
       },
-      "guardDisable",
+      "guard",
       { remaining: "1:30m" }
-    );
-  });
-  test("don't show guard disable timer if not charging", () => {
-    expectStatus(
-      {
-        guardAction: "disable",
-        connected: true,
-        charging: false,
-        guardRemainingInterpolated: 90,
-      },
-      "connected"
     );
   });
 });
@@ -214,7 +206,7 @@ describe("smart grid charging", () => {
         charging: true,
         tariffCo2: 400,
         smartCostLimit: 500,
-        smartCostUnit: "gCO2eq",
+        smartCostType: "co2",
       },
       "cleanEnergyCharging"
     );

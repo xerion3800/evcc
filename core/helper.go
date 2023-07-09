@@ -1,10 +1,11 @@
 package core
 
 import (
-	"github.com/avast/retry-go/v3"
+	"github.com/avast/retry-go/v4"
 	"github.com/evcc-io/evcc/api"
 	"github.com/evcc-io/evcc/util"
 	"github.com/samber/lo"
+	"golang.org/x/exp/constraints"
 )
 
 var (
@@ -45,4 +46,19 @@ func vehicleTitles(vehicles []api.Vehicle) []string {
 	return lo.Map(vehicles, func(v api.Vehicle, _ int) string {
 		return v.Title()
 	})
+}
+
+// max of slice values
+func max[T constraints.Ordered](s []T) T {
+	if len(s) == 0 {
+		var zero T
+		return zero
+	}
+	m := s[0]
+	for _, v := range s {
+		if v > m {
+			m = v
+		}
+	}
+	return m
 }

@@ -7,7 +7,7 @@
 [![OSS hosting by cloudsmith](https://img.shields.io/badge/OSS%20hosting%20by-cloudsmith-blue?logo=cloudsmith)](https://cloudsmith.io/~evcc/packages/)
 [![Latest Version](https://img.shields.io/github/release/evcc-io/evcc.svg)](https://github.com/evcc-io/evcc/releases)
 
-evcc is an extensible EV Charge Controller with PV integration implemented in [Go][2]. Featured in [PV magazine](https://www.pv-magazine.de/2021/01/15/selbst-ist-der-groeoenlandhof-wallbox-ladesteuerung-selbst-gebaut/).
+evcc is an extensible EV Charge Controller with PV integration implemented in [Go][1]. Featured in [PV magazine](https://www.pv-magazine.de/2021/01/15/selbst-ist-der-groeoenlandhof-wallbox-ladesteuerung-selbst-gebaut/).
 
 ![Screenshot](docs/screenshot.png)
 
@@ -54,11 +54,22 @@ make
 ./evcc
 ```
 
+### UI development
+
 For frontend development start the Vue toolchain in dev-mode. Open http://127.0.0.1:7071/ to get to the livelreloading development server. It pulls its data from port 7070 (see above).
 
 ```sh
 npm install
 npm run start
+```
+
+### Integration tests
+
+We use Playwright for end-to-end integration tests. They start a local evcc instance with different configuration yamls and prefilled databases. To run them, you have to do a local build first.
+
+```sh
+make ui build
+npm run playwright
 ```
 
 ### Code formatting

@@ -40,24 +40,16 @@ func NewPorscheFromConfig(other map[string]interface{}) (api.Vehicle, error) {
 	}
 
 	log := util.NewLogger("porsche").Redact(cc.User, cc.Password, cc.VIN)
-	identity := porsche.NewIdentity(log, cc.User, cc.Password)
+	identity := porsche.NewIdentity(log)
 
-	err := identity.Login()
+	err := identity.Login(porsche.OAuth2Config, cc.User, cc.Password)
 	if err != nil {
 		return nil, fmt.Errorf("login failed: %w", err)
 	}
 
-	api := porsche.NewAPI(log, identity.DefaultSource)
-	mobile := porsche.NewMobileAPI(log, identity.MobileSource)
+	api := porsche.NewAPI(log, identity)
 
 	cc.VIN, err = ensureVehicle(cc.VIN, func() ([]string, error) {
-		mobileVehicles, err := mobile.Vehicles()
-		if err == nil {
-			return lo.Map(mobileVehicles, func(v porsche.StatusResponseMobile, _ int) string {
-				return v.VIN
-			}), err
-		}
-
 		vehicles, err := api.Vehicles()
 		return lo.Map(vehicles, func(v porsche.Vehicle, _ int) string {
 			return v.VIN
@@ -74,13 +66,18 @@ func NewPorscheFromConfig(other map[string]interface{}) (api.Vehicle, error) {
 	}
 
 	// get eMobility capabilities
-	emobility := porsche.NewEmobilityAPI(log, identity.EmobilitySource)
-	capabilities, err := emobility.Capabilities(cc.VIN)
+	emobIdentity := porsche.NewIdentity(log)
+	if err := emobIdentity.Login(porsche.EmobilityOAuth2Config, cc.User, cc.Password); err != nil {
+		return nil, fmt.Errorf("emobility login failed: %w", err)
+	}
+
+	emobApi := porsche.NewEmobilityAPI(log, emobIdentity)
+	capabilities, err := emobApi.Capabilities(cc.VIN)
 	if err != nil {
 		return nil, err
 	}
 
-	provider := porsche.NewProvider(log, api, emobility, mobile, cc.VIN, capabilities.CarModel, cc.Cache)
+	provider := porsche.NewProvider(log, api, emobApi, cc.VIN, capabilities.CarModel, cc.Cache)
 
 	v := &Porsche{
 		embed:    &cc.embed,

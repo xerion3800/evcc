@@ -96,7 +96,7 @@ func NewOCPPFromConfig(other map[string]interface{}) (api.Charger, error) {
 	return decorateOCPP(c, powerG, totalEnergyG, currentsG, phasesS), nil
 }
 
-// go:generate go run ../cmd/tools/decorate.go -f decorateOCPP -b *OCPP -r api.Charger -t "api.Meter,CurrentPower,func() (float64, error)" -t "api.MeterEnergy,TotalEnergy,func() (float64, error)" -t "api.PhaseCurrents,Currents,func() (float64, float64, float64, error)" -t "api.PhaseSwitcher,Phases1p3p,func(int) (error)"
+// go:generate go run ../cmd/tools/decorate.go -f decorateOCPP -b *OCPP -r api.Charger -t "api.Meter,CurrentPower,func() (float64, error)" -t "api.MeterEnergy,TotalEnergy,func() (float64, error)" -t "api.PhaseCurrents,Currents,func() (float64, float64, float64, error)" -t "api.PhaseSwitcher,Phases1p3p,func(int) error"
 
 // NewOCPP creates OCPP charger
 func NewOCPP(id string, connector int, idtag string,
@@ -233,7 +233,7 @@ func NewOCPP(id string, connector int, idtag string,
 	if c.hasMeasurement(types.MeasurandPowerActiveImport) || c.hasMeasurement(types.MeasurandEnergyActiveImportRegister) {
 		ocpp.Instance().TriggerMeterValuesRequest(cp.ID(), cp.Connector())
 
-		if !noConfig && meterSampleInterval > meterInterval && meterInterval > 0 {
+		if meterInterval > 0 && meterInterval != meterSampleInterval {
 			if err := c.configure(ocpp.KeyMeterValueSampleInterval, strconv.Itoa(int(meterInterval.Seconds()))); err != nil {
 				return nil, err
 			}
@@ -316,6 +316,10 @@ func (c *OCPP) Enable(enable bool) error {
 		txn, err = c.cp.TransactionID()
 		if err != nil {
 			return err
+		}
+
+		if txn == 0 {
+			return errors.New("unknown transaction running, cannot disable")
 		}
 
 		err = ocpp.Instance().RemoteStopTransaction(c.cp.ID(), func(resp *core.RemoteStopTransactionConfirmation, err error) {

@@ -4,7 +4,7 @@
 
 <script>
 import formatter from "../mixins/formatter";
-import { CO2_UNIT } from "../units";
+import { CO2_TYPE } from "../units";
 
 export default {
 	name: "VehicleStatus",
@@ -27,7 +27,7 @@ export default {
 		targetChargeDisabled: Boolean,
 		climaterActive: Boolean,
 		smartCostLimit: Number,
-		smartCostUnit: String,
+		smartCostType: String,
 		tariffGrid: Number,
 		tariffCo2: Number,
 	},
@@ -44,13 +44,10 @@ export default {
 			);
 		},
 		guardTimerActive() {
-			return (
-				this.guardRemainingInterpolated > 0 &&
-				["enable", "disable"].includes(this.guardAction)
-			);
+			return this.guardRemainingInterpolated > 0 && this.guardAction === "enable";
 		},
 		isCo2() {
-			return this.smartCostUnit === CO2_UNIT;
+			return this.smartCostType === CO2_TYPE;
 		},
 		message: function () {
 			const t = (key, data) => {
@@ -119,20 +116,14 @@ export default {
 				});
 			}
 
-			if (this.guardTimerActive && this.charging && this.guardAction === "disable") {
-				return t("guardDisable", {
+			if (this.guardTimerActive) {
+				return t("guard", {
 					remaining: this.fmtShortDuration(this.guardRemainingInterpolated, true),
 				});
 			}
 
 			if (this.charging) {
 				return t("charging");
-			}
-
-			if (this.guardTimerActive && this.guardAction === "enable") {
-				return t("guardEnable", {
-					remaining: this.fmtShortDuration(this.guardRemainingInterpolated, true),
-				});
 			}
 
 			return t("connected");

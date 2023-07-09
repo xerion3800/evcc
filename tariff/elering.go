@@ -16,9 +16,9 @@ import (
 )
 
 type Elering struct {
+	*embed
 	mux     sync.Mutex
 	log     *util.Logger
-	unit    string
 	region  string
 	data    api.Rates
 	updated time.Time
@@ -31,11 +31,10 @@ func init() {
 }
 
 func NewEleringFromConfig(other map[string]interface{}) (api.Tariff, error) {
-	cc := struct {
-		Currency string
+	var cc struct {
+		embed    `mapstructure:",squash"`
+		Currency string // TODO deprecated
 		Region   string
-	}{
-		Currency: "EUR",
 	}
 
 	if err := util.DecodeOther(other, &cc); err != nil {
@@ -47,8 +46,8 @@ func NewEleringFromConfig(other map[string]interface{}) (api.Tariff, error) {
 	}
 
 	t := &Elering{
+		embed:  &cc.embed,
 		log:    util.NewLogger("Elering"),
-		unit:   cc.Currency,
 		region: strings.ToLower(cc.Region),
 	}
 
@@ -92,18 +91,13 @@ func (t *Elering) run(done chan error) {
 			ar := api.Rate{
 				Start: ts.Local(),
 				End:   ts.Add(time.Hour).Local(),
-				Price: r.Price / 1e3,
+				Price: t.totalPrice(r.Price / 1e3),
 			}
 			t.data = append(t.data, ar)
 		}
 
 		t.mux.Unlock()
 	}
-}
-
-// Unit implements the api.Tariff interface
-func (t *Elering) Unit() string {
-	return t.unit
 }
 
 // Rates implements the api.Tariff interface
@@ -113,7 +107,7 @@ func (t *Elering) Rates() (api.Rates, error) {
 	return slices.Clone(t.data), outdatedError(t.updated, time.Hour)
 }
 
-// IsDynamic implements the api.Tariff interface
-func (t *Elering) IsDynamic() bool {
-	return true
+// Type returns the tariff type
+func (t *Elering) Type() api.TariffType {
+	return api.TariffTypePriceDynamic
 }

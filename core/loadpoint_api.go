@@ -18,11 +18,6 @@ func (lp *Loadpoint) Title() string {
 	return lp.Title_
 }
 
-// Priority returns the loadpoint priority
-func (lp *Loadpoint) Priority() int {
-	return lp.Priority_
-}
-
 // GetStatus returns the charging status
 func (lp *Loadpoint) GetStatus() api.ChargeStatus {
 	lp.Lock()
@@ -99,6 +94,26 @@ func (lp *Loadpoint) SetTargetEnergy(energy float64) {
 	if lp.targetEnergy != energy {
 		lp.setTargetEnergy(energy)
 		lp.requestUpdate()
+	}
+}
+
+// GetPriority returns the loadpoint priority
+func (lp *Loadpoint) GetPriority() int {
+	lp.Lock()
+	defer lp.Unlock()
+	return lp.Priority_
+}
+
+// SetPriority sets the loadpoint priority
+func (lp *Loadpoint) SetPriority(prio int) {
+	lp.Lock()
+	defer lp.Unlock()
+
+	lp.log.DEBUG.Println("set priority:", prio)
+
+	if lp.Priority_ != prio {
+		lp.Priority_ = prio
+		lp.publish("priority", prio)
 	}
 }
 
@@ -396,21 +411,18 @@ func (lp *Loadpoint) GetRemainingEnergy() float64 {
 
 // GetVehicle gets the active vehicle
 func (lp *Loadpoint) GetVehicle() api.Vehicle {
-	lp.Lock()
-	defer lp.Unlock()
+	lp.vehicleMux.Lock()
+	defer lp.vehicleMux.Unlock()
 	return lp.vehicle
 }
 
 // SetVehicle sets the active vehicle
 func (lp *Loadpoint) SetVehicle(vehicle api.Vehicle) {
-	// TODO develop universal locking approach
-	// setActiveVehicle is protected by lock, hence no locking here
-
-	// set desired vehicle
+	// set desired vehicle (protected by lock, no locking here)
 	lp.setActiveVehicle(vehicle)
 
-	lp.Lock()
-	defer lp.Unlock()
+	lp.vehicleMux.Lock()
+	defer lp.vehicleMux.Unlock()
 
 	// disable auto-detect
 	lp.stopVehicleDetection()

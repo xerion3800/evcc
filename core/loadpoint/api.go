@@ -17,7 +17,6 @@ type Controller interface {
 type API interface {
 	// Title returns the defined loadpoint title
 	Title() string
-	Priority() int
 
 	//
 	// status
@@ -29,6 +28,11 @@ type API interface {
 	//
 	// settings
 	//
+
+	// GetPriority returns the loadpoint priority
+	GetPriority() int
+	// SetPriority sets the loadpoint priority
+	SetPriority(int)
 
 	// GetMode returns the charge mode
 	GetMode() api.ChargeMode
@@ -55,8 +59,6 @@ type API interface {
 	GetTargetSoc() int
 	// SetTargetSoc sets the charge target soc
 	SetTargetSoc(int)
-	// GetPlannerUnit returns the planning tariffs unit
-	GetPlannerUnit() string
 	// GetPlan creates a charging plan
 	GetPlan(targetTime time.Time, maxPower float64) (time.Duration, api.Rates, error)
 	// GetEnableThreshold gets the loadpoint enable threshold
