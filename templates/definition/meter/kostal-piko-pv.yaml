@@ -24,3 +24,9 @@ render: |
     #   | ---------------------------- PAC W ------------- |
     jq: (.dxsEntries[] | select(.dxsId==67109120) | .value )
   {{- end -}}
+  type: custom
+  energy:
+    source: http
+    uri: http://{{ .host }}/api/dxs.json?dxsEntries=251658753 # total yield
+    #   | ---------------------------- PAC W ------------- |
+    jq: (.dxsEntries[] | select(.dxsId==251658753) | .value )
