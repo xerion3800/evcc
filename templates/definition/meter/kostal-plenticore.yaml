@@ -1,86 +1,32 @@
-template: kostal-plenticore
+template: kostal-piko-pv
 products:
   - brand: Kostal
     description:
-      generic: Plenticore Hybrid
-capabilities: ["battery-control"]
-linked:
-  - template: kostal-ksem-inverter
-    usage: grid
-  - template: kostal-ksem
-    usage: grid
-    excludetemplate: kostal-ksem-inverter
-requirements:
-  description:
-    de: |
-      Nur ein System kann und darf auf den Wechselrichter zugreifen! Für die aktive Batteriesteuerung muss die externe Batteriesteuerung über Modbus mit dem Handwerkerzugang aktiviert sein.
-    en: |
-      Only a single system may access the inverter! For active battery control, the external battery control via Modbus must be activated using installer access.
+      generic: Piko, Piko BA
 params:
   - name: usage
-    choice: ["pv", "battery"]
-    allinone: true
-  - name: modbus
-    choice: ["tcpip"]
-    id: 71
-    port: 1502
-  - name: endianness
-    description:
-      de: Byte-Reihenfolge (Little/Big)
-      en: Endianness (Little/Big)
-    validvalues: ["big", "little"]
-    default: little
-    advanced: true
-  - name: capacity
-    advanced: true
-  # battery control
-  - name: minsoc
-    type: number
-    advanced: true
-  - name: maxsoc
-    type: number
-    advanced: true
-  - name: watchdog
-    type: duration
-    default: 60s
-    advanced: true
+    choice: ["grid", "pv"]
+  - name: host
 render: |
+  type: custom
+  power:
+  {{- if eq .usage "grid" }}
+    # Grid
+    source: http
+    uri: http://{{ .host }}/api/dxs.json?dxsEntries=83886336&dxsEntries=83886848&dxsEntries=83886592&dxsEntries=67109120 # Home PV Power + Home Grid Power + Home Bat Power - PV/Bat Inverter Power
+    #   | ----------------------------- Home PV W -------- | + | --------------------------- Home Grid W -------- | + | --------------------------- Home Bat W --------- | - | --------------------------- PV/BAT Inv W ------- |
+    jq: (.dxsEntries[] | select(.dxsId==83886336) | .value ) + (.dxsEntries[] | select(.dxsId==83886848) | .value ) + (.dxsEntries[] | select(.dxsId==83886592) | .value ) - (.dxsEntries[] | select(.dxsId==67109120) | .value )
+  {{- end -}}
   {{- if eq .usage "pv" }}
+    # PV
+    source: http
+    uri: http://{{ .host }}/api/dxs.json?dxsEntries=67109120 # total AC output
+    #   | ---------------------------- PAC W ------------- |
+    jq: (.dxsEntries[] | select(.dxsId==67109120) | .value )
+  {{- end -}}
   type: custom
-  power:
-    source: calc
-    add: # The add plugin sums up all string values
-    - source: sunspec
-      {{- include "modbus" . | indent 4 }}
-      value: 160:1:DCW # string 1
-    - source: sunspec
-      {{- include "modbus" . | indent 4 }}
-      value: 160:2:DCW # string 2
-    - source: sunspec
-      {{- include "modbus" . | indent 4 }}
-      value: 160:3:DCW # string 3
-  {{- end }}
-  {{- if eq .usage "battery" }}
-  type: custom
-  power:
-    source: sunspec
-    {{- include "modbus" . | indent 2 }}
-    value: 802:W # 802 battery control
-  soc:
-    source: sunspec
-    {{- include "modbus" . | indent 2 }}
-    value: 802:SoC # 802 battery control
-  limitsoc:
-    source: watchdog
-    timeout: {{ .watchdog }} # re-write at timeout/2
-    set:
-      source: modbus
-      {{- include "modbus" . | indent 4 }}
-      register:
-        address: 1042 # limit soc
-        type: writemultiple
-        encoding: {{ if (eq .endianness "big") }}float32{{ else }}float32s{{ end }}
-  capacity: {{ .capacity }} # kWh
-  minsoc: {{ .minsoc }} # %
-  maxsoc: {{ .maxsoc }} # %
-  {{- end }}
+  energy:
+    source: http
+    uri: http://{{ .host }}/api/dxs.json?dxsEntries=251658753 # total yield
+    #   | ---------------------------- PAC W ------------- |
+    jq: (.dxsEntries[] | select(.dxsId==251658753) | .value )
