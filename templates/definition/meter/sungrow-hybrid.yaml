@@ -73,7 +73,7 @@ render: |
         type: input
         decode: int16
       scale: 0.1
-  - source: calc  
+  - source: calc
     div:
     - source: modbus
       {{- include "modbus" . | indent 2 }}
