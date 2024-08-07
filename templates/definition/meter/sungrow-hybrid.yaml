@@ -97,34 +97,34 @@ render: |
         scale: 0.1
   - source: calc  
     div:
-    - source: modbus
-      {{- include "modbus" . | indent 2 }}
-      register:
-        address: 5021 # Meter Phase B Active Power, 1kWh
-        type: input
-        decode: uint16
-    - source: modbus
-      {{- include "modbus" . | indent 2 }}
-      register:
-        address: 5019 # Meter Phase B Active Voltage, 0.1V
-        type: input
-        decode: int16
-      scale: 0.1
+      - source: modbus
+        {{- include "modbus" . | indent 2 }}
+        register:
+          address: 5021 # Meter Phase B Active Power, 1kWh
+          type: input
+          decode: uint16
+      - source: modbus
+        {{- include "modbus" . | indent 2 }}
+        register:
+          address: 5019 # Meter Phase B Active Voltage, 0.1V
+          type: input
+          decode: int16
+        scale: 0.1
   - source: calc  
     div:
-    - source: modbus
-      {{- include "modbus" . | indent 2 }}
-      register:
-        address: 5022 # Meter Phase C Active Power, 1kWh
-        type: input
-        decode: uint16
-    - source: modbus
-      {{- include "modbus" . | indent 2 }}
-      register:
-        address: 5020 # Meter Phase C Active Voltage, 0.1V
-        type: input
-        decode: int16
-      scale: 0.1
+      - source: modbus
+        {{- include "modbus" . | indent 2 }}
+        register:
+          address: 5022 # Meter Phase C Active Power, 1kWh
+          type: input
+          decode: uint16
+      - source: modbus
+        {{- include "modbus" . | indent 2 }}
+        register:
+          address: 5020 # Meter Phase C Active Voltage, 0.1V
+          type: input
+          decode: int16
+        scale: 0.1
   {{- end }}
   {{- if eq .usage "pv" }}
   power:
