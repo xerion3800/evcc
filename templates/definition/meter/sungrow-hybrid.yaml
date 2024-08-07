@@ -80,12 +80,24 @@ render: |
       decode: int16
     scale: 0.1
   currents:
+  - source: calc
+    add:
     - source: const
       value:  1
     - source: const
       value:  2
+  - source: calc
+    add:
     - source: const
-      value:  3
+      value:  1
+    - source: const
+      value:  2
+  - source: calc
+    add:
+    - source: const
+      value:  1
+    - source: const
+      value:  2
   {{- end }}
   {{- if eq .usage "pv" }}
   power:
