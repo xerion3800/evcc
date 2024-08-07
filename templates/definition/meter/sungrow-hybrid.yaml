@@ -87,7 +87,7 @@ render: |
     - source: const
       value:  2
   - source: calc
-    add:
+    div:
     - source: const
       value:  1
     - source: const
