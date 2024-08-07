@@ -39,24 +39,24 @@ render: |
       decode: uint32s
     scale: 0.1
   powers:
-  - source: modbus
-    {{- include "modbus" . | indent 2 }}
-    register:
-      address: 5602 # Meter Phase A Active Power, 1kWh
-      type: input
-      decode: int32s
-  - source: modbus
-    {{- include "modbus" . | indent 2 }}
-    register:
-      address: 5604 # Meter Phase B Active Power, 1kWh
-      type: input
-      decode: int32s
-  - source: modbus
-    {{- include "modbus" . | indent 2 }}
-    register:
-      address: 5606 # Meter Phase C Active Power, 1kWh
-      type: input
-      decode: int32s
+    - source: modbus
+      {{- include "modbus" . | indent 2 }}
+      register:
+        address: 5602 # Meter Phase A Active Power, 1kWh
+        type: input
+        decode: int32s
+    - source: modbus
+      {{- include "modbus" . | indent 2 }}
+      register:
+        address: 5604 # Meter Phase B Active Power, 1kWh
+        type: input
+        decode: int32s
+    - source: modbus
+      {{- include "modbus" . | indent 2 }}
+      register:
+        address: 5606 # Meter Phase C Active Power, 1kWh
+        type: input
+        decode: int32s
   currents:
   - source: calc
     div:
