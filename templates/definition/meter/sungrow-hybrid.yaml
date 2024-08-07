@@ -57,7 +57,7 @@ render: |
       address: 5606 # Meter Phase C Active Power, 1kWh
       type: input
       decode: int32s
-  voltages:
+  voltages: # grid voltages in V
   - source: modbus
     {{- include "modbus" . | indent 2 }}
     register:
@@ -69,7 +69,7 @@ render: |
     {{- include "modbus" . | indent 2 }}
     register:
       address: 5019 # Meter Phase B Active Voltage, 0.1V
-    type: input
+      type: input
       decode: int16
     scale: 0.1
   - source: modbus
