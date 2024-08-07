@@ -80,7 +80,6 @@ render: |
       decode: int16
     scale: 0.1
   currents:
-  type: custom
   - source: calc
     div:
     - source: modbus
