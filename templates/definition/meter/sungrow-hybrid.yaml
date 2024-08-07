@@ -81,8 +81,8 @@ render: |
     scale: 0.1
   currents:
   type: custom
-  source: calc
-  - div:
+  - source: calc
+    div:
     - source: modbus
       {{- include "modbus" . | indent 2 }}
       register:
@@ -96,7 +96,8 @@ render: |
         type: input
         decode: int16
       scale: 0.1
-  - div:
+  - source: calc  
+    div:
     - source: modbus
       {{- include "modbus" . | indent 2 }}
       register:
@@ -110,7 +111,8 @@ render: |
         type: input
         decode: int16
       scale: 0.1
-  - div:
+  - source: calc   
+    div:
     - source: modbus
       {{- include "modbus" . | indent 2 }}
       register:
