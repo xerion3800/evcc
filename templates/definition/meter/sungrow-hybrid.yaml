@@ -81,15 +81,19 @@ render: |
     scale: 0.1
   currents:
   - source: calc
-    add:
+    div:
     - source: const
       value:  1
     - source: const
       value:  2
   - source: calc
     div:
-    - source: go
-      {{ .capacity }}
+    - source: modbus
+      {{- include "modbus" . | indent 2 }}
+      register:
+        address: 5602 # Meter Phase A Active Power, 1kWh
+        type: input
+        decode: int32s
     - source: const
       value:  230
   - source: calc
