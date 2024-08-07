@@ -94,13 +94,8 @@ render: |
         address: 5021 # Meter Phase B Active Power, 1kWh
         type: input
         decode: uint16
-    - source: modbus
-      {{- include "modbus" . | indent 2 }}
-      register:
-        address: 5019 # Meter Phase B Active Voltage, 0.1V
-        type: input
-        decode: int16
-      scale: 0.1
+    - source: const
+      value:  230
   - source: calc
     add:
     - source: const
