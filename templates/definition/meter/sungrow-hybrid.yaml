@@ -67,18 +67,21 @@ render: |
       address: 5018 # Meter Phase A Voltage, 0.1V
       type: input
       decode: int16
+    scale: 0.1
   - source: modbus
     {{- include "modbus" . | indent 2 }}
     register:
       address: 5019 # Meter Phase B Active Voltage, 0.1V
       type: input
       decode: int16
+    scale: 0.1
   - source: modbus
     {{- include "modbus" . | indent 2 }}
     register:
       address: 5020 # Meter Phase C Active Voltage, 0.1V
       type: input
       decode: int16
+    scale: 0.1
   {{- end }}
   {{- if eq .usage "pv" }}
   power:
