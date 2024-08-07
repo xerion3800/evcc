@@ -82,19 +82,19 @@ render: |
   currents:
   - source: calc
     div:
-    - source: modbus
-      {{- include "modbus" . | indent 2 }}
-      register:
-        address: 5020 # Meter Phase A Active Power, 1kWh
-        type: input
-        decode: uint16
-    - source: modbus
-      {{- include "modbus" . | indent 2 }}
-      register:
-        address: 5018 # Meter Phase A Voltage, 0.1V
-        type: input
-        decode: int16
-      scale: 0.1
+      - source: modbus
+        {{- include "modbus" . | indent 2 }}
+        register:
+          address: 5020 # Meter Phase A Active Power, 1kWh
+          type: input
+          decode: uint16
+      - source: modbus
+        {{- include "modbus" . | indent 2 }}
+        register:
+          address: 5018 # Meter Phase A Voltage, 0.1V
+          type: input
+          decode: int16
+        scale: 0.1
   - source: calc  
     div:
     - source: modbus
