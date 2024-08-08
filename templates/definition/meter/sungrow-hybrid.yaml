@@ -89,7 +89,7 @@ render: |
   - source: calc
     div:
     - source: modbus
-      # {{- include "modbus" . | indent 2 }}
+      {{- include "modbus" . | indent 2 }}
       register:
         address: 5602 # Meter Phase A Active Power, 1kWh
         type: input
