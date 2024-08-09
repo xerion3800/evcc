@@ -94,8 +94,8 @@ render: |
         address: 5602 # Meter Phase A Active Power, 1kWh
         type: input
         decode: int32s
-    - source: const
-      value:  230
+    source: const
+    value:  230
   - source: calc
     div:
     - source: const
