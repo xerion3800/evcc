@@ -20,8 +20,8 @@ params:
   - name: capacity
     advanced: true
 render: |
-  type: custom
   {{- if eq .usage "grid" }}
+  type: custom
   power:
     source: modbus
     {{- include "modbus" . | indent 2 }}
@@ -97,13 +97,14 @@ render: |
     - source: const
       value:  230
   - source: calc
-    add:
+    div:
     - source: const
       value:  1
     - source: const
       value:  2
   {{- end }}
   {{- if eq .usage "pv" }}
+  type: custom
   power:
     source: modbus
     {{- include "modbus" . | indent 2 }}
@@ -121,6 +122,7 @@ render: |
     scale: 0.1
   {{- end }}
   {{- if eq .usage "battery" }}
+  type: custom
   power:
     source: calc
     mul:
